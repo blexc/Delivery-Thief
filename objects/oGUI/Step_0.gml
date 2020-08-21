@@ -25,6 +25,7 @@ if (global.paused)
 		if (combine_c != -1 && combine_r != -1)
 		{
 			CombineFromInventory(
+				oInventory,
 				ds_grid_get(oInventory.items, col, row),
 				ds_grid_get(oInventory.items, combine_c, combine_r),
 				oInventory.items);
