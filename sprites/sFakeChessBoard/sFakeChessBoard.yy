@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"78a1e11f-a109-4a0b-9b00-30a767f8804a","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"78a1e11f-a109-4a0b-9b00-30a767f8804a","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"LayerId":{"name":"d9eb4e7b-d4f8-499e-aab2-6a6bba81d732","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sFakeChessBoard","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"resourceVersion":"1.0","name":"78a1e11f-a109-4a0b-9b00-30a767f8804a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"65c00f35-3a14-4a37-8f39-67d2153a7f08","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"65c00f35-3a14-4a37-8f39-67d2153a7f08","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"LayerId":{"name":"8a5f4825-6cbe-4c87-9dc4-a452046bbc97","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sFakeChessBoard","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"resourceVersion":"1.0","name":"65c00f35-3a14-4a37-8f39-67d2153a7f08","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sFakeChessBoard","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a079ff40-9116-4b7b-8761-7c8806bc9460","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"78a1e11f-a109-4a0b-9b00-30a767f8804a","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1e19e5a6-bb2c-44a2-8b02-69a7c9c41a7e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"65c00f35-3a14-4a37-8f39-67d2153a7f08","path":"sprites/sFakeChessBoard/sFakeChessBoard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,11 +65,11 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d9eb4e7b-d4f8-499e-aab2-6a6bba81d732","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8a5f4825-6cbe-4c87-9dc4-a452046bbc97","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Collectible",
-    "path": "folders/Sprites/Collectible.yy",
+    "name": "Collectibles",
+    "path": "folders/Sprites/Collectibles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sFakeChessBoard",

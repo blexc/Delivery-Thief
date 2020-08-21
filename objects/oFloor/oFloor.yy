@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sCheckerBoard",
-    "path": "sprites/sCheckerBoard/sCheckerBoard.yy",
+    "name": "sFloor",
+    "path": "sprites/sFloor/sFloor.yy",
   },
   "solid": false,
   "visible": true,
@@ -11,7 +11,7 @@
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,

@@ -1,5 +1,5 @@
 {
-  "bboxMode": 1,
+  "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
   "origin": 0,
@@ -7,8 +7,8 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 15,
+  "bbox_left": 1,
+  "bbox_right": 14,
   "bbox_top": 0,
   "bbox_bottom": 15,
   "HTile": false,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"95e4bafc-222b-466a-9915-eca80f4871fe","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"95e4bafc-222b-466a-9915-eca80f4871fe","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"LayerId":{"name":"b2847f13-13c2-4848-95a0-8218ef37483a","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRustyChessPieces","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"resourceVersion":"1.0","name":"95e4bafc-222b-466a-9915-eca80f4871fe","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"06d8f6bc-7c48-44ec-b280-32b931e018df","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"06d8f6bc-7c48-44ec-b280-32b931e018df","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"LayerId":{"name":"3f8d26a6-b97a-4298-ab9e-f0696d834479","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sRustyChessPieces","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"resourceVersion":"1.0","name":"06d8f6bc-7c48-44ec-b280-32b931e018df","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sRustyChessPieces","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2777df09-9963-4f03-b331-670435b16f3e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95e4bafc-222b-466a-9915-eca80f4871fe","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"77db80ce-57bc-4bd3-8034-2a21634410ac","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"06d8f6bc-7c48-44ec-b280-32b931e018df","path":"sprites/sRustyChessPieces/sRustyChessPieces.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,11 +65,11 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b2847f13-13c2-4848-95a0-8218ef37483a","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3f8d26a6-b97a-4298-ab9e-f0696d834479","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Collectible",
-    "path": "folders/Sprites/Collectible.yy",
+    "name": "Collectibles",
+    "path": "folders/Sprites/Collectibles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRustyChessPieces",

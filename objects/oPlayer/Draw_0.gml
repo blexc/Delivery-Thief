@@ -1,8 +1,5 @@
 draw_self();
 
-// debug
-draw_circle_color(target_x, target_y, 3, c_green, c_green, 1);
-
 // animations
 if (can_dash) image_index = 0;
 else image_index = 1;

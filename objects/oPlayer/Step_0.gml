@@ -35,8 +35,6 @@ if (!moving)
 	}
 }
 
-
-
 // change target if dash
 if (dash && can_dash && dash_key_let_go && (move_x != 0 || move_y != 0))
 {

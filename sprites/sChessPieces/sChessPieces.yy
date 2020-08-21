@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8b602e6a-071d-4764-9217-65cd978daaee","path":"sprites/sChessPieces/sChessPieces.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8b602e6a-071d-4764-9217-65cd978daaee","path":"sprites/sChessPieces/sChessPieces.yy",},"LayerId":{"name":"bd341f28-ce28-4135-b86c-1ab6f1d5093a","path":"sprites/sChessPieces/sChessPieces.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sChessPieces","path":"sprites/sChessPieces/sChessPieces.yy",},"resourceVersion":"1.0","name":"8b602e6a-071d-4764-9217-65cd978daaee","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c959c6d3-fc31-46bf-867c-ab2e17d7bd8c","path":"sprites/sChessPieces/sChessPieces.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c959c6d3-fc31-46bf-867c-ab2e17d7bd8c","path":"sprites/sChessPieces/sChessPieces.yy",},"LayerId":{"name":"eb05bec9-44f1-4ab2-a343-6d7afd6e12bb","path":"sprites/sChessPieces/sChessPieces.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChessPieces","path":"sprites/sChessPieces/sChessPieces.yy",},"resourceVersion":"1.0","name":"c959c6d3-fc31-46bf-867c-ab2e17d7bd8c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sChessPieces","path":"sprites/sChessPieces/sChessPieces.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"47464d72-6160-41a5-baf7-1e37067e65ee","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b602e6a-071d-4764-9217-65cd978daaee","path":"sprites/sChessPieces/sChessPieces.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f7956b74-b102-409a-8ad4-927edcbc6cda","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c959c6d3-fc31-46bf-867c-ab2e17d7bd8c","path":"sprites/sChessPieces/sChessPieces.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,11 +65,11 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bd341f28-ce28-4135-b86c-1ab6f1d5093a","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"eb05bec9-44f1-4ab2-a343-6d7afd6e12bb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Collectible",
-    "path": "folders/Sprites/Collectible.yy",
+    "name": "Collectibles",
+    "path": "folders/Sprites/Collectibles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sChessPieces",

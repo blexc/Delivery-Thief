@@ -4,6 +4,7 @@
 
 display_set_gui_size(WIN_W, WIN_H);
 
+// global input vars
 global.k_up = vk_up;
 global.k_down = vk_down;
 global.k_left = vk_left;
@@ -14,5 +15,6 @@ global.k_dash = ord("X");
 
 global.paused = false;
 
+last_room = room;
 money = 2500;
-cur_enemy_instance_id = -1; // only set while in minigame
+cur_enemy_instance_id = -1;
