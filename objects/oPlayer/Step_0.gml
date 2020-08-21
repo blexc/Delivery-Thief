@@ -14,6 +14,9 @@ move_x = right - left;
 move_y = down - up;
 spaces = 1;
 
+center_x = x + (sprite_get_bbox_right(sprite_index) / 2);
+center_y = y + (sprite_get_bbox_bottom(sprite_index) / 2);
+
 #region movement
 // set initial target to move towards
 if (!moving)
@@ -23,14 +26,14 @@ if (!moving)
 
 	if (move_x != 0)
 	{
-		looking_x = move_x;
-		looking_y = 0;
+		look_x = move_x;
+		look_y = 0;
 		target_x = x + (move_x * PIX * spaces);
 	}
 	else if (move_y != 0)
 	{
-		looking_x = 0;
-		looking_y = move_y;
+		look_x = 0;
+		look_y = move_y;
 		target_y = y + (move_y * PIX * spaces);
 	}
 }
@@ -103,10 +106,10 @@ y += vy;
 if (interact && !moving)
 {
 	var xx, yy;
-	xx = x+looking_x*PIX;
-	yy = y+looking_y*PIX;
+	xx = x+look_x*PIX;
+	yy = y+look_y*PIX;
 	with(collision_rectangle(xx, yy, xx+PIX-1, yy+PIX-1, pCollectible, 0, 1))
 	{
-		alarm[0] = 1;
+		AddToInventory(self, oInventory.items)
 	}
 }

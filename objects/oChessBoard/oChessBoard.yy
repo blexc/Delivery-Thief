@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sChessBoard",
+    "path": "sprites/sChessBoard/sChessBoard.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "pSolid",
-    "path": "objects/pSolid/pSolid.yy",
+    "name": "pCollectible",
+    "path": "objects/pCollectible/pCollectible.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -21,17 +24,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [],
-  "properties": [
-    {"varType":2,"value":"\"collectible object\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"title","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":2,"value":"\"...\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"desc","tags":[],"resourceType":"GMObjectProperty",},
-  ],
+  "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Collectibles",
     "path": "folders/Objects/Collectibles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "pCollectible",
+  "name": "oChessBoard",
   "tags": [],
   "resourceType": "GMObject",
 }
