@@ -37,7 +37,7 @@ else if (enter)
 {
 	if (draw)
 	{
-		room_restart();
+		InitTicTacToe();
 	}
 	else if (turn == player_choice) // you lose
 	{

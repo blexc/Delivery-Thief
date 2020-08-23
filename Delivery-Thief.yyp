@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"InitTicTacToe","path":"scripts/InitTicTacToe/InitTicTacToe.yy",},"order":2,},
     {"id":{"name":"sQuarter","path":"sprites/sQuarter/sQuarter.yy",},"order":6,},
     {"id":{"name":"oBoard","path":"objects/oBoard/oBoard.yy",},"order":1,},
     {"id":{"name":"oFakeChessBoard","path":"objects/oFakeChessBoard/oFakeChessBoard.yy",},"order":5,},

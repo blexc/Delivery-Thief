@@ -52,7 +52,7 @@ for (var i=0; i < 3; i++)
 	}
 }
 
-if (board_filled) state = 2;
+if (board_filled && state != 1) state = 2;
 
 switch (state)
 {
