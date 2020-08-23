@@ -26,5 +26,3 @@ quarters = 1;
 spawner = -1; // -1 for init_spawn, 0 for minigame, 1, 2, 3, etc. for numbered spawners
 cur_enemy_instance_id = -1;
 last_room = room;
-last_room_pos_x = -1;
-last_room_pos_y = -1;

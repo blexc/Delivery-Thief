@@ -1,3 +1,6 @@
-if (oPlayer.can_move) oPlayer.can_move = false;
-SlideTransition(TRANS_MODE.GOTO, target);
-oGameManager.spawner = spawner_num;
+if (oPlayer.can_move)
+{
+	oGameManager.spawner = spawner_num;
+	oPlayer.can_move = false;
+	SlideTransition(TRANS_MODE.GOTO, target);
+}
