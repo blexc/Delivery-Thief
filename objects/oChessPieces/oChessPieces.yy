@@ -25,7 +25,10 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"title","path":"objects/pCollectible/pCollectible.yy",},"objectId":{"name":"pCollectible","path":"objects/pCollectible/pCollectible.yy",},"value":"\"Chess Pieces\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"desc","path":"objects/pCollectible/pCollectible.yy",},"objectId":{"name":"pCollectible","path":"objects/pCollectible/pCollectible.yy",},"value":"\"Looks clean and polished.\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Collectibles",
     "path": "folders/Objects/Collectibles.yy",

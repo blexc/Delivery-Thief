@@ -25,7 +25,10 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"title","path":"objects/pCollectible/pCollectible.yy",},"objectId":{"name":"pCollectible","path":"objects/pCollectible/pCollectible.yy",},"value":"\"Cloth\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"desc","path":"objects/pCollectible/pCollectible.yy",},"objectId":{"name":"pCollectible","path":"objects/pCollectible/pCollectible.yy",},"value":"\"It's wet with some kind of cleaning substance.\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Collectibles",
     "path": "folders/Objects/Collectibles.yy",

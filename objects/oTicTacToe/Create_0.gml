@@ -1,4 +1,12 @@
-money_at_stake = irandom_range(400, 500);
+quarters_if_win = 2;
+quarters_to_play = 1;
+
+if (oGameManager.quarters < quarters_to_play)
+{
+	ExitMinigame(oTicTacToe, false);
+}
+
+oGameManager.quarters -= quarters_to_play;
 
 // create the board
 board = ds_grid_create(3, 3);

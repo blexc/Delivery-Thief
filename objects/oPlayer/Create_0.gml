@@ -5,11 +5,14 @@ vx = 0; vy = 0;
 center_x = x + (sprite_get_bbox_right(sprite_index) / 2);
 center_y = y + (sprite_get_bbox_bottom(sprite_index) / 2);
 
+can_move = true;
 moving = false;
 walk_sp = 6; // higher means slower
 
 dash_spaces = 2;
 can_dash = true;
+can_dash_timer = Sec2Frames(2);
 dash_key_let_go = true;
 
 invunerable = false;
+invunerable_timer = Sec2Frames(1);

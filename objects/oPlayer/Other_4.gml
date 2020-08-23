@@ -1,2 +1,3 @@
 oPlayer.invunerable = true;
-oPlayer.alarm[1] = Sec2Frames(2); // set invunerability timer
+oPlayer.alarm[1] = invunerable_timer; // set invunerability timer
+can_move = true;

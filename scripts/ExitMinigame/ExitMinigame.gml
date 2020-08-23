@@ -1,20 +1,25 @@
-/// @description ExitMinigame(money_at_stake, did_win)
-/// @arg money_at_stake
+/// @description ExitMinigame(minigame, did_win)
+/// @arg minigame
 /// @arg did_win
-function ExitMinigame(money_at_stake, did_win)
+function ExitMinigame(minigame, did_win)
 {
-	room_goto(oGameManager.last_room);
-	room_persistent = false;
+	with (oGameManager)
+	{
+		SlideTransition(TRANS_MODE.GOTO, last_room);
+		room_set_persistent(last_room, false);
+		
+		room_instance_add(last_room, last_room_pos_x, last_room_pos_y, oPlayer);
+		last_room_pos_x = -1;
+		last_room_pos_y = -1;
 	
-	if (did_win)
-	{
-		oGameManager.money += money_at_stake;
-		oGameManager.alarm[0] = Sec2Frames(0.25); // kill enemy
-	}
-	else
-	{
-		oGameManager.money -= money_at_stake;
-		oGameManager.money = max(0, oGameManager.money);
-		oGameManager.cur_enemy_instance_id = -1;
+		if (did_win)
+		{
+			quarters += minigame.quarters_if_win;
+			alarm[0] = 1; // kill enemy
+		}
+		else
+		{
+			cur_enemy_instance_id = -1;
+		}		
 	}
 }

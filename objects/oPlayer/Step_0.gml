@@ -1,15 +1,22 @@
 if (global.paused) exit;
 
 // input
-var up, down, left, right, interact, dash, dash_released, move_x, move_y, spaces;
-up = keyboard_check(global.k_up);
-down = keyboard_check(global.k_down);
-left = keyboard_check(global.k_left);
-right = keyboard_check(global.k_right);
+var up = 0, down = 0, left = 0, right = 0,
+	interact = 0, dash = 0, dash_released = 0,
+	move_x, move_y, spaces;
 
-interact = keyboard_check_pressed(global.k_interact);
-dash = keyboard_check(global.k_dash);
-dash_released = keyboard_check_released(global.k_dash);
+if (can_move)
+{
+	up = keyboard_check(global.k_up);
+	down = keyboard_check(global.k_down);
+	left = keyboard_check(global.k_left);
+	right = keyboard_check(global.k_right);
+
+	interact = keyboard_check_pressed(global.k_interact);
+	dash = keyboard_check(global.k_dash);
+	dash_released = keyboard_check_released(global.k_dash);
+}
+
 move_x = right - left;
 move_y = down - up;
 spaces = 1;
@@ -42,8 +49,10 @@ if (!moving)
 if (dash && can_dash && dash_key_let_go && (move_x != 0 || move_y != 0))
 {
 	can_dash = false;
+	invunerable = true;
+	alarm[1] = invunerable_timer;
+	alarm[0] = can_dash_timer;
 	dash_key_let_go = false;
-	alarm[0] = Sec2Frames(1);
 	if (moving)
 	{
 		target_x += sign(vx) * PIX * dash_spaces;
@@ -54,7 +63,6 @@ if (dash && can_dash && dash_key_let_go && (move_x != 0 || move_y != 0))
 		target_x += move_x * PIX * dash_spaces;
 		target_y += move_y * PIX * dash_spaces;
 	}
-
 }
 
 if (dash_released) dash_key_let_go = true;	
@@ -113,3 +121,7 @@ if (interact && !moving)
 		AddToInventory(self, oInventory.items)
 	}
 }
+
+// animations
+image_index = (can_dash) ? 0 : 1;
+image_alpha = (invunerable) ? 0.25 : 1;

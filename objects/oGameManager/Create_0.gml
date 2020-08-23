@@ -14,8 +14,17 @@ global.k_interact = ord("C");
 global.k_dash = ord("X");
 global.paused = false;
 
-last_room = room;
-money = 2500;
-cur_enemy_instance_id = -1;
+// rooms
+game_rooms = ds_list_create();
+ds_list_add(game_rooms, rChessHouse1, r3Houses);
 
- 
+minigame_rooms = ds_list_create();
+ds_list_add(minigame_rooms, rTicTacToe);
+
+quarters = 1;
+
+spawner = -1; // -1 for init_spawn, 0 for minigame, 1, 2, 3, etc. for numbered spawners
+cur_enemy_instance_id = -1;
+last_room = room;
+last_room_pos_x = -1;
+last_room_pos_y = -1;

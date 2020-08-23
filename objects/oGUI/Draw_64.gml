@@ -1,7 +1,11 @@
-if (room != rGame) exit;
+if (ds_list_find_index(oGameManager.game_rooms, room) == -1)
+{
+	exit;
+}
 
-SetDraw(c_white, fa_left, fa_top, 1);
-draw_text(0, 0, string(oGameManager.money));
+SetDraw(c_white, fa_left, fa_center, 1);
+draw_sprite_stretched(sQuarter, 0, 20, 20, 32, 32);
+draw_text(55, 35, "x " + string(oGameManager.quarters));
 
 if (global.paused)
 {
