@@ -1,18 +1,14 @@
 target_x = x; target_y = y;
-orig_x = x; orig_y = y;
 look_x = 0; look_y = -1;
-vx = 0; vy = 0;
 center_x = x + (sprite_get_bbox_right(sprite_index) / 2);
 center_y = y + (sprite_get_bbox_bottom(sprite_index) / 2);
 
 can_move = true;
-moving = false;
-walk_sp = 6; // higher means slower
-
-dash_spaces = 2;
-can_dash = true;
-can_dash_timer = Sec2Frames(2);
-dash_key_let_go = true;
+walk_sp = 2; // must be able to divide by 16 with no remainder
 
 invunerable = false;
 invunerable_timer = Sec2Frames(1);
+
+speed = 0;
+image_speed = 0;
+depth = -bbox_bottom;

@@ -1,4 +1,9 @@
 /// @description shoot projectile
+if (!layer_exists("Projectile"))
+{
+	layer_create(1, "Projectile");	
+}
+
 with(instance_create_layer(center_x, center_y, "Projectile", oProjectile))
 {
 	x = other.center_x;

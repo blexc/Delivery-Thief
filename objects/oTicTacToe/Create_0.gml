@@ -10,6 +10,6 @@ else
 	oGameManager.quarters -= quarters_to_play;
 	InitTicTacToe();
 	
-	s = room_width/5; // size of squares
+	s = WIN_W/5; // size of squares
 }
 

@@ -2,8 +2,7 @@ if (global.paused) exit;
 
 // input
 var up = 0, down = 0, left = 0, right = 0,
-	interact = 0, dash = 0, dash_released = 0,
-	move_x, move_y, spaces;
+	interact = 0, move_x = 0, move_y = 0;
 
 if (can_move)
 {
@@ -11,107 +10,35 @@ if (can_move)
 	down = keyboard_check(global.k_down);
 	left = keyboard_check(global.k_left);
 	right = keyboard_check(global.k_right);
-
 	interact = keyboard_check_pressed(global.k_interact);
-	dash = keyboard_check(global.k_dash);
-	dash_released = keyboard_check_released(global.k_dash);
 }
 
 move_x = right - left;
 move_y = down - up;
-spaces = 1;
+if (move_x != 0) move_y = 0;
 
 center_x = x + (sprite_get_bbox_right(sprite_index) / 2);
 center_y = y + (sprite_get_bbox_bottom(sprite_index) / 2);
 
 #region movement
-// set initial target to move towards
-if (!moving)
+if (speed == 0 && (move_x != 0 || move_y != 0))
 {
-	orig_x = x;
-	orig_y = y;
-
-	if (move_x != 0)
-	{
-		look_x = move_x;
-		look_y = 0;
-		target_x = x + (move_x * PIX * spaces);
-	}
-	else if (move_y != 0)
-	{
-		look_x = 0;
-		look_y = move_y;
-		target_y = y + (move_y * PIX * spaces);
-	}
+	target_x = x + (move_x * PIX);
+	target_y = y + (move_y * PIX);
+	look_x = move_x;
+	look_y = move_y;
+	speed = walk_sp;
 }
 
-// change target if dash
-if (dash && can_dash && dash_key_let_go && (move_x != 0 || move_y != 0))
+if (point_distance(x, y, target_x, target_y) > 0 &&
+	!place_meeting(target_x, target_y, pSolid))
 {
-	can_dash = false;
-	invunerable = true;
-	alarm[1] = invunerable_timer;
-	alarm[0] = can_dash_timer;
-	dash_key_let_go = false;
-	if (moving)
-	{
-		target_x += sign(vx) * PIX * dash_spaces;
-		target_y += sign(vy) * PIX * dash_spaces;
-	}
-	else
-	{
-		target_x += move_x * PIX * dash_spaces;
-		target_y += move_y * PIX * dash_spaces;
-	}
+	move_towards_point(target_x, target_y, speed);
 }
-
-if (dash_released) dash_key_let_go = true;	
-
-// set speed if you're not where you're supposed to be
-if (target_y != y || target_x != x)
-{
-	moving = true;
-	vy = (target_y - orig_y) / walk_sp;
-	vx = (target_x - orig_x) / walk_sp;
-}
-
-// you're going to pass the target, force player to target instead
-if (sign(vx) * (x + vx - target_x) > 0)
-{
-	x = target_x;
-	moving = false;
-	vx = 0;
-}
-else if (sign(vy) * (y + vy - target_y) > 0)
-{
-	y = target_y;
-	moving = false;
-	vy = 0;
-}
-
-// collision
-if (place_meeting(x, y+vy, pSolid))
-{
-	while (!place_meeting(x, y+sign(vy), pSolid)) y += sign(vy);
-	moving = false;
-	target_y = y;
-	vy = 0;
-}
-
-if (place_meeting(x+vx, y, pSolid))
-{
-	while (!place_meeting(x+sign(vx), y, pSolid)) x += sign(vx);
-	moving = false;
-	target_x = x;
-	vx = 0;
-}
-
-x += vx;
-y += vy;
-
+else speed = 0;
 #endregion
 
-if (interact && !moving)
+if (interact)
 {
 	var xx, yy;
 	xx = x+look_x*PIX;
@@ -123,5 +50,4 @@ if (interact && !moving)
 }
 
 // animations
-image_index = (can_dash) ? 0 : 1;
 image_alpha = (invunerable) ? 0.25 : 1;

@@ -8,10 +8,10 @@ if (!game_start) msg = "choose X or O";
 for (var i=0; i < 2; i++)
 {
 	var choice = (i==0) ? "X": "O";
-	x1 = i*(room_width-s);
-	y1 = room_height-s;
+	x1 = i*(WIN_W-s);
+	y1 = WIN_H-s;
 	x2 = x1+s;
-	y2 = room_height-1;
+	y2 = WIN_H-1;
 
 	// draw rectangles
 	SetDraw((player_choice == choice) ? c_red : c_white, fa_left, fa_top, 1);
@@ -36,9 +36,9 @@ for (var r=0; r < 3; r++)
 		SetDraw(c_white, fa_left, fa_top, 1);
 		if (r == row && c == column) draw_set_color(c_red);
 		
-		x1 = room_width/2 + (c-1)*s - s/2;
+		x1 = WIN_W/2 + (c-1)*s - s/2;
 		y1 = r*s;
-		x2 = room_width/2 + (c-1)*s + s/2;
+		x2 = WIN_W/2 + (c-1)*s + s/2;
 		y2 = s+(r*s)-1;
 		draw_rectangle(x1+5, y1+5, x2-5, y2-5, true);
 
@@ -56,4 +56,4 @@ if (game_over)
 }
 
 SetDraw(c_white, fa_center, fa_center, 1);
-draw_text_ext(room_width/2, room_height - room_height/4, msg, 30, 192);
+draw_text_ext(WIN_W/2, WIN_H - WIN_H/4, msg, 30, 192);
