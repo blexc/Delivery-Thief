@@ -5,4 +5,4 @@ selected_alpha_normal = 0.3;
 selected_alpha_pressed = 0.9;
 selected_alpha = selected_alpha_normal;
 
-s = 100;
+s = 64;

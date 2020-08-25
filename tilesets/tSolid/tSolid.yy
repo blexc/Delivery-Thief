@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "sFloor",
-    "path": "sprites/sFloor/sFloor.yy",
+    "name": "sSolid",
+    "path": "sprites/sSolid/sSolid.yy",
   },
-  "tileWidth": 32,
-  "tileHeight": 32,
+  "tileWidth": 16,
+  "tileHeight": 16,
   "tilexoff": 0,
   "tileyoff": 0,
   "tilehsep": 0,
@@ -38,7 +38,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "tChessHouse",
+  "name": "tSolid",
   "tags": [],
   "resourceType": "GMTileSet",
 }

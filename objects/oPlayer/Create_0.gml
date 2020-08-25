@@ -11,4 +11,4 @@ invunerable_timer = Sec2Frames(1);
 
 speed = 0;
 image_speed = 0;
-depth = -bbox_bottom;
+

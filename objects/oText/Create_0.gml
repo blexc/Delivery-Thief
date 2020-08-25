@@ -8,3 +8,5 @@ x2_target = WIN_W;
 
 text_progress = 0;
 lerp_progress = 0;
+
+response_selected = 0;

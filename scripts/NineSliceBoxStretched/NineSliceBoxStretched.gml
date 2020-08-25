@@ -2,6 +2,9 @@ function NineSliceBoxStretched(_sprite, _x1, _y1, _x2, _y2){
 	var _size = sprite_get_width(_sprite) / 3;
     var _w = _x2 - _x1;
     var _h = _y2 - _y1;
+	
+	draw_set_color(c_white);
+	draw_set_alpha(1);
 
     // MIDDLE
     draw_sprite_part_ext(_sprite, 0, _size, _size, 1, 1, _x1+_size, _y1+_size,

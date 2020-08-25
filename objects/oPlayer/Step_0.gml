@@ -20,7 +20,7 @@ if (move_x != 0) move_y = 0;
 center_x = x + (sprite_get_bbox_right(sprite_index) / 2);
 center_y = y + (sprite_get_bbox_bottom(sprite_index) / 2);
 
-#region movement
+#region movement and collision
 if (speed == 0 && (move_x != 0 || move_y != 0))
 {
 	target_x = x + (move_x * PIX);
@@ -30,8 +30,28 @@ if (speed == 0 && (move_x != 0 || move_y != 0))
 	speed = walk_sp;
 }
 
-if (point_distance(x, y, target_x, target_y) > 0 &&
-	!place_meeting(target_x, target_y, pSolid))
+var entity_list = ds_list_create();
+var entity_count = instance_position_list(target_x, target_y, pEntity, entity_list, false);
+var collision_at_target = false;
+
+while (entity_count > 0)
+{
+	var entity_check = entity_list[| 0]; // find list value
+	if (entity_check.entityCollision)
+	{
+		collision_at_target = true;
+		break;
+	}
+	ds_list_delete(entity_list, 0);
+	entity_count--;
+}
+
+ds_list_clear(entity_list);
+
+collision_at_target = collision_at_target || tilemap_get_at_pixel(
+		layer_tilemap_get_id(layer_get_id("Solid")), target_x, target_y)
+
+if (point_distance(x, y, target_x, target_y) > 0 && !collision_at_target)
 {
 	move_towards_point(target_x, target_y, speed);
 }
@@ -43,11 +63,64 @@ if (interact)
 	var xx, yy;
 	xx = x+look_x*PIX;
 	yy = y+look_y*PIX;
-	with(collision_rectangle(xx, yy, xx+PIX-1, yy+PIX-1, pCollectible, 0, 1))
+	activate = collision_rectangle(xx, yy, xx+PIX-1, yy+PIX-1, pEntity, 0, 1);
+	
+	if (activate == noone || activate.entityActivateScript == -1)
 	{
-		AddToInventory(self, oInventory.items)
+		// do nothing
+	}
+	else
+	{
+		switch (array_length(activate.entityActivateArgs))
+		{
+			case 1:
+				script_execute(activate.entityActivateScript, activate.entityActivateArgs[0]);
+				break;
+			case 2:
+				script_execute(activate.entityActivateScript, activate.entityActivateArgs[0],
+							   activate.entityActivateArgs[1]);
+				break;
+			case 3:
+				script_execute(activate.entityActivateScript, activate.entityActivateArgs[0],
+							   activate.entityActivateArgs[1], activate.entityActivateArgs[2]);
+				break;
+		}	
 	}
 }
 
 // animations
 image_alpha = (invunerable) ? 0.25 : 1;
+depth = -bbox_bottom;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
