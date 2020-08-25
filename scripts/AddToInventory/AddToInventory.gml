@@ -10,9 +10,8 @@ function AddToInventory(instance, grid){
 			var spot = ds_grid_get(grid, c, r);
 			if (spot == noone)
 			{
-				instance.x = 0; instance.y = 0;
-				layer_add_instance("Inventory", instance);
 				ds_grid_set(grid, c, r, instance);
+				instance_deactivate_object(instance);
 				return true;
 			}
 		}

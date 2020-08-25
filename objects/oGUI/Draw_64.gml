@@ -9,8 +9,6 @@ draw_text(55, 35, "x " + string(oGameManager.quarters));
 
 if (global.paused)
 {
-	layer_set_visible(layer_get_id("Inventory"), true);	
-	
 	// draw the items
 	var buf = 16;
 	var sx = buf;
@@ -44,10 +42,10 @@ if (global.paused)
 				draw_rectangle(x1+2, y1+2, x2-3, y2-3, false);
 			}
 			
-			var obj = ds_grid_get(oInventory.items, c, r);
-			if (obj != noone)
+			var inst = ds_grid_get(oInventory.items, c, r);
+			if (inst != noone)
 			{
-				draw_sprite_stretched(obj.sprite_index, 0, x1+3, y1+3, s-6, s-6);
+				draw_sprite_stretched(inst.sprite_index, 0, x1+3, y1+3, s-6, s-6);
 			}
 		}
 	}
@@ -61,8 +59,8 @@ if (global.paused)
 	NineSliceBoxStretched(sTextBoxBg, sx, sy, ex, ey);
 	
 	var msg = "";
-	var obj_selected = ds_grid_get(oInventory.items, col, row);
-	if (obj_selected != noone) msg = obj_selected.title + "\n" + obj_selected.desc;
+	var inst_selected = ds_grid_get(oInventory.items, col, row);
+	if (inst_selected != noone) msg = inst_selected.title + "\n" + inst_selected.desc;
 	
 	SetDraw(c_white, fa_center, fa_top, 1);
 	draw_text((sx+ex)/2, sy+8, msg);

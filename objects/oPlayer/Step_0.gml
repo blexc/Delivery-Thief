@@ -1,10 +1,8 @@
-if (global.paused) exit;
-
 // input
 var up = 0, down = 0, left = 0, right = 0,
 	interact = 0, move_x = 0, move_y = 0;
 
-if (can_move)
+if (can_move && !global.paused)
 {
 	up = keyboard_check(global.k_up);
 	down = keyboard_check(global.k_down);

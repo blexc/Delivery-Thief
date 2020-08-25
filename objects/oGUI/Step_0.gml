@@ -31,7 +31,7 @@ if (global.paused)
 				oInventory.items);
 
 			combine_c = -1;
-			combine_r = -1;			
+			combine_r = -1;
 		}
 		else
 		{
@@ -39,8 +39,6 @@ if (global.paused)
 			combine_r = row;		
 		}
 	}
-	
-	alarm[0] = 1;
 }
 
 

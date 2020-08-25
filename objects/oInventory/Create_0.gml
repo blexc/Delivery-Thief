@@ -9,7 +9,6 @@ for (var r=0; r < ds_grid_height(items); r+=1)
 		ds_grid_add(items, c, r, noone);
 	}
 }
-layer_set_visible(layer_get_id("Inventory"), false);
 
 // setup combination map of string
 combinations = ds_map_create();
