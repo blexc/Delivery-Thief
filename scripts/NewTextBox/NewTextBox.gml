@@ -1,4 +1,5 @@
 function NewTextBox(_msg, _responses){
+	if (0) return argument[0];	// gets rid of error msg about parameter count
 	var _obj;
 	if (instance_exists(oText)) _obj = oTextQueued;
 	else _obj = oText;
@@ -12,7 +13,7 @@ function NewTextBox(_msg, _responses){
 		responses = [-1];
 		response_scripts = [-1];
 		
-		if (!is_undefined(_responses))
+		if (_responses != undefined)
 		{
 			responses = _responses;
 			// trim markers from responses

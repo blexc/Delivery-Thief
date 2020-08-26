@@ -71,6 +71,9 @@ if (interact)
 	{
 		switch (array_length(activate.entityActivateArgs))
 		{
+			case 0:
+				script_execute(activate.entityActivateScript);
+				break;
 			case 1:
 				script_execute(activate.entityActivateScript, activate.entityActivateArgs[0]);
 				break;
