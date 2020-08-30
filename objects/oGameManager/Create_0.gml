@@ -1,7 +1,7 @@
 #macro PIX 16
-#macro WIN_W 320
-#macro WIN_H 320
-
+#macro WIN_W 240
+#macro WIN_H 160
+#macro FRAME_RATE 60
 surface_resize(application_surface, WIN_W, WIN_H);
 
 // global input vars

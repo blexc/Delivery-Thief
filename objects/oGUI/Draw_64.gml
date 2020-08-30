@@ -4,8 +4,8 @@ if (ds_list_find_index(oGameManager.game_rooms, room) == -1)
 }
 
 SetDraw(c_white, fa_left, fa_center, 1);
-draw_sprite_stretched(sQuarter, 0, 20, 20, 32, 32);
-draw_text(55, 35, "x " + string(oGameManager.quarters));
+draw_sprite(sQuarter, 0, 5, 5);
+draw_text(20, 15, "x " + string(oGameManager.quarters));
 
 if (global.paused)
 {

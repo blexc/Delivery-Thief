@@ -20,10 +20,11 @@
         {"properties":[
             {"propertyId":{"name":"target","path":"objects/oTransitioner1/oTransitioner1.yy",},"objectId":{"name":"oTransitioner1","path":"objects/oTransitioner1/oTransitioner1.yy",},"value":"r3Houses","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oTransitioner1","path":"objects/oTransitioner1/oTransitioner1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":320.0,"resourceVersion":"1.0","name":"inst_7D7CF61","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oSpawner2","path":"objects/oSpawner2/oSpawner2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":144.0,"y":336.0,"resourceVersion":"1.0","name":"inst_29E27E44","tags":[],"resourceType":"GMRInstance",},
-      ],"visible":false,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Invisible","tags":[],"resourceType":"GMRInstanceLayer",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oSpawner2","path":"objects/oSpawner2/oSpawner2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":336.0,"resourceVersion":"1.0","name":"inst_29E27E44","tags":[],"resourceType":"GMRInstance",},
+      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Invisible","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oChessBoard","path":"objects/oChessBoard/oChessBoard.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":64.0,"resourceVersion":"1.0","name":"inst_2E6F7D3F","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oTic","path":"objects/oTic/oTic.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":176.0,"y":320.0,"resourceVersion":"1.0","name":"inst_1345B995","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tSolid","path":"tilesets/tSolid/tSolid.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":40,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
@@ -98,6 +99,7 @@
     {"name":"inst_7D7CF61","path":"rooms/rChessHouse2/rChessHouse2.yy",},
     {"name":"inst_29E27E44","path":"rooms/rChessHouse2/rChessHouse2.yy",},
     {"name":"inst_2E6F7D3F","path":"rooms/rChessHouse2/rChessHouse2.yy",},
+    {"name":"inst_1345B995","path":"rooms/rChessHouse2/rChessHouse2.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,

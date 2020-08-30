@@ -56,4 +56,4 @@ if (game_over)
 }
 
 SetDraw(c_white, fa_center, fa_center, 1);
-draw_text_ext(WIN_W/2, WIN_H - WIN_H/4, msg, 30, 192);
+draw_text_ext(WIN_W/2, WIN_H-5, msg, 30, 192);

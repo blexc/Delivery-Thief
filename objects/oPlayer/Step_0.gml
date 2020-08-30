@@ -19,41 +19,29 @@ center_x = x + (sprite_get_bbox_right(sprite_index) / 2);
 center_y = y + (sprite_get_bbox_bottom(sprite_index) / 2);
 
 #region movement and collision
+
+if (point_distance(x, y, target_x, target_y) > 0 &&
+	!CollisionAtTarget(target_x, target_y))
+{
+	move_towards_point(target_x, target_y, speed);
+}
+else speed = 0;
+
 if (speed == 0 && (move_x != 0 || move_y != 0))
 {
 	target_x = x + (move_x * PIX);
 	target_y = y + (move_y * PIX);
 	look_x = move_x;
 	look_y = move_y;
-	speed = walk_sp;
-}
 
-var entity_list = ds_list_create();
-var entity_count = instance_position_list(target_x, target_y, pEntity, entity_list, false);
-var collision_at_target = false;
-
-while (entity_count > 0)
-{
-	var entity_check = entity_list[| 0]; // find list value
-	if (entity_check.entityCollision)
+	if (point_distance(x, y, target_x, target_y) > 0 &&
+		!CollisionAtTarget(target_x, target_y))
 	{
-		collision_at_target = true;
-		break;
+		speed = walk_sp;
+		move_towards_point(target_x, target_y, speed);
 	}
-	ds_list_delete(entity_list, 0);
-	entity_count--;
 }
 
-ds_list_clear(entity_list);
-
-collision_at_target = collision_at_target || tilemap_get_at_pixel(
-		layer_tilemap_get_id(layer_get_id("Solid")), target_x, target_y)
-
-if (point_distance(x, y, target_x, target_y) > 0 && !collision_at_target)
-{
-	move_towards_point(target_x, target_y, speed);
-}
-else speed = 0;
 #endregion
 
 if (interact)

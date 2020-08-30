@@ -1,12 +1,15 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function RomanEvents(){
 	with (oRoman)
 	{
-		// if player has real chess board
-		if (IsInInventory(oChessBoard, true) || global.quest_complete)
+		if (global.quest_complete)
 		{
 			NewTextBox("Thank You!");
+		}
+		// if player has real chess board
+		else if (IsInInventory(oChessBoard, true))
+		{
+			NewTextBox("Thank You!");
+			oGameManager.quarters += 5;
 			global.quest_complete = true;
 		}
 		else
