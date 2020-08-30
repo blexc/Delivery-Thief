@@ -11,11 +11,12 @@ for (var i=0; i < 2; i++)
 	x1 = i*(WIN_W-s);
 	y1 = WIN_H-s;
 	x2 = x1+s;
-	y2 = WIN_H-1;
+	y2 = WIN_H-2;
 
 	// draw rectangles
 	SetDraw((player_choice == choice) ? c_red : c_white, fa_left, fa_top, 1);
-	draw_rectangle(x1, y1, x2, y2, true);
+	if (i == 0)	draw_rectangle(x1+1, y1, x2, y2, true);
+	else if (i == 1) draw_rectangle(x1, y1, x2-2, y2, true);
 	
 	// draw options X, or O
 	SetDraw(c_white, fa_center, fa_center, 1);
@@ -50,8 +51,8 @@ for (var r=0; r < 3; r++)
 
 if (game_over)
 {
-	if (draw) msg = "Game results\nin a tie.\nPress 'c'\nto play\nagain.";
-	else if (turn != player_choice) msg = "You win!";
+	if (draw) msg = "Tie. Play again?";
+	else if (turn != player_choice) msg = "You win.";
 	else msg = "You lose.";
 }
 

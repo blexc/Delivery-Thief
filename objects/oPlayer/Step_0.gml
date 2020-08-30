@@ -81,6 +81,17 @@ if (interact)
 image_alpha = (invunerable) ? 0.25 : 1;
 depth = -bbox_bottom;
 
+var _old_sprite = sprite_index;
+if (speed != 0)
+{
+	direction = point_direction(x, y, target_x, target_y);
+	//sprite_index = sprite_walk;
+}
+else sprite_index = sprite_idle;
+if (_old_sprite != sprite_index) local_frame = 0;
+
+Animate();
+
 
 
 

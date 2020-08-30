@@ -9,7 +9,8 @@ speed = 0;
 target_index = -1;
 target_x = x;
 target_y = y;
-stop_at_target = false;
+caught_player = false;
+wall_between = false;
 
 image_speed = 0;
 sprite_index = sprite_idle;
