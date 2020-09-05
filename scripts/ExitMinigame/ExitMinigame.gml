@@ -1,7 +1,7 @@
-/// @description ExitMinigame(minigame, did_win)
-/// @arg minigame
+/// @description ExitMinigame(quarters_if_win, did_win)
+/// @arg quarters_if_win
 /// @arg did_win
-function ExitMinigame(minigame, did_win)
+function ExitMinigame(quarters_if_win, did_win)
 {
 	with (oGameManager)
 	{
@@ -9,7 +9,7 @@ function ExitMinigame(minigame, did_win)
 	
 		if (did_win)
 		{
-			quarters += minigame.quarters_if_win;
+			quarters += quarters_if_win;
 		}
 		else
 		{

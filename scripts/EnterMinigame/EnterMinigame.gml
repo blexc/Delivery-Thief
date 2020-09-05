@@ -7,7 +7,7 @@ function EnterMinigame(minigame_room, who_started_game)
 	{
 		last_room = room;
 		cur_enemy_instance_id = who_started_game;
-		
+		cur_enemy_minigame_difficulty = who_started_game.enemyMinigameDifficulty;
 		spawner = 0;
 	}
 

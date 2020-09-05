@@ -9,11 +9,10 @@ if (can_move && !global.paused)
 	left = keyboard_check(global.k_left);
 	right = keyboard_check(global.k_right);
 	interact = keyboard_check_pressed(global.k_interact);
+	move_x = right - left;
+	move_y = down - up;
+	if (move_x != 0) move_y = 0;
 }
-
-move_x = right - left;
-move_y = down - up;
-if (move_x != 0) move_y = 0;
 
 center_x = x + (sprite_get_bbox_right(sprite_index) / 2);
 center_y = y + (sprite_get_bbox_bottom(sprite_index) / 2);
@@ -33,6 +32,7 @@ if (speed == 0 && (move_x != 0 || move_y != 0))
 	target_y = y + (move_y * PIX);
 	look_x = move_x;
 	look_y = move_y;
+	direction = point_direction(x, y, target_x, target_y);
 
 	if (point_distance(x, y, target_x, target_y) > 0 &&
 		!CollisionAtTarget(target_x, target_y))
@@ -82,12 +82,7 @@ image_alpha = (invunerable) ? 0.25 : 1;
 depth = -bbox_bottom;
 
 var _old_sprite = sprite_index;
-if (speed != 0)
-{
-	direction = point_direction(x, y, target_x, target_y);
-	//sprite_index = sprite_walk;
-}
-else sprite_index = sprite_idle;
+sprite_index = (speed == 0) ? sprite_idle : sprite_walk;
 if (_old_sprite != sprite_index) local_frame = 0;
 
 Animate();

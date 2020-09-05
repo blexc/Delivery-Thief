@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Minigame",
-    "path": "folders/Scripts/Minigame.yy",
+    "name": "Minigames",
+    "path": "folders/Scripts/Minigames.yy",
   },
   "resourceVersion": "1.0",
   "name": "EnterMinigame",

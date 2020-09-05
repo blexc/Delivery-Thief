@@ -41,11 +41,11 @@ else if (enter)
 	}
 	else if (turn == player_choice) // you lose
 	{
-		ExitMinigame(oTicTacToe, false);
+		ExitMinigame(quarters_if_win, false);
 	}
 	else
 	{
-		ExitMinigame(oTicTacToe, true); // you win
+		ExitMinigame(quarters_if_win, true); // you win
 	}
 }
 

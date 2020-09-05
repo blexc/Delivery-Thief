@@ -27,6 +27,7 @@ ds_list_add(minigame_rooms, rTicTacToe);
 
 quarters = 1;
 
-spawner = -1; // -1 for init_spawn, 0 for minigame, 1, 2, 3, etc. for numbered spawners
+spawner = -1; // -1 for init_spawn; 0 for minigame; 1, 2, 3, etc. for numbered spawners
 cur_enemy_instance_id = -1;
+cur_enemy_minigame_difficulty = 1;
 last_room = room;

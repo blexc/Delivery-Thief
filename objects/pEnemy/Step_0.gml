@@ -72,12 +72,9 @@ if (!caught_player &&
 
 	with (oPlayer)
 	{
-		if (!other.wall_between && point_distance(x, y, target_x, target_y) <= 0)
+		if (!invunerable && !other.wall_between &&
+			point_distance(x, y, target_x, target_y) <= 0)
 		{
-
-			// walk up to the player
-			// freeze the player
-			// TODO make the player face the enemy
 			// TODO dialogue
 			other.caught_player = true;
 			other.target_x = x;
@@ -85,17 +82,15 @@ if (!caught_player &&
 			look_x = -other.look_x;
 			look_y = -other.look_y;
 			can_move = false;
+			direction = point_direction(x, y, other.x, other.y);
 		}
 	}
 }
 
-if (caught_player)
+if (caught_player && point_distance(x, y, oPlayer.x, oPlayer.y) <= 0)
 {
-	with (oPlayer)
-	{
-		if (point_distance(x, y, other.x, other.y) <= 0)
-			EnterMinigame(rTicTacToe, other.id);
-	}
+	EnterMinigame(enemyMinigameRoom, id);
+	caught_player = false;
 }
 
 #region animations

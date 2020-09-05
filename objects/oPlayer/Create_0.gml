@@ -8,10 +8,10 @@ walk_sp = 1; // must be able to divide by 16 with no remainder
 speed = 0;
 
 invunerable = false;
-invunerable_timer = Sec2Frames(1);
+invunerable_timer = Sec2Frames(3);
 
 sprite_idle = sPlayerIdle;
-//sprite_walk = sPlayerWalk; // TODO
+sprite_walk = sPlayerWalk;
 
 image_speed = 0;
 sprite_index = sprite_idle;
