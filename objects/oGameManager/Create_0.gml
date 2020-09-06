@@ -1,7 +1,3 @@
-#macro PIX 16
-#macro WIN_W 240
-#macro WIN_H 160
-#macro FRAME_RATE 60
 surface_resize(application_surface, WIN_W, WIN_H);
 
 // global input vars
@@ -30,4 +26,5 @@ quarters = 1;
 spawner = -1; // -1 for init_spawn; 0 for minigame; 1, 2, 3, etc. for numbered spawners
 cur_enemy_instance_id = -1;
 cur_enemy_minigame_difficulty = 1;
+defeated_enemy = false;
 last_room = room;

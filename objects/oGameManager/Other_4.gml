@@ -7,12 +7,16 @@ else if (ds_list_find_index(game_rooms, room) != -1)
 	// entering game room
 	Print("game room entered");
 	room_persistent = false;
-	
-	// if there is an enemy to kill
+
 	if (cur_enemy_instance_id != -1)
 	{
-		instance_destroy(cur_enemy_instance_id);
+		if (defeated_enemy)
+			cur_enemy_instance_id.state = EnemyStateIdle;
+		else
+			cur_enemy_instance_id.state = EnemyStateBackToWalk;	
+		
 		cur_enemy_instance_id = -1;
+		defeated_enemy = false;
 	}
 }
 else if (ds_list_find_index(minigame_rooms, room) != -1)

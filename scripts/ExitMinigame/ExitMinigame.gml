@@ -6,14 +6,11 @@ function ExitMinigame(quarters_if_win, did_win)
 	with (oGameManager)
 	{
 		SlideTransition(TRANS_MODE.GOTO, last_room);
-	
+		defeated_enemy = did_win;
+		
 		if (did_win)
 		{
 			quarters += quarters_if_win;
 		}
-		else
-		{
-			cur_enemy_instance_id = -1;
-		}		
 	}
 }
