@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sFloor",
-    "path": "sprites/sFloor/sFloor.yy",
+    "name": "sTileset3HousesInside",
+    "path": "sprites/sTileset3HousesInside/sTileset3HousesInside.yy",
   },
   "solid": false,
   "visible": true,
