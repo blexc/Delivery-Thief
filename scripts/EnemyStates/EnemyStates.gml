@@ -7,7 +7,7 @@ function EnemyStateIdle()
 
 function EnemyStateWalk()
 {
-	// if you're not moving and you're supposed to
+	// update target to be the next waypoint
 	if (speed == 0 && array_length(enemyTargetInstances) > 0)
 	{
 		target_index++;
@@ -34,8 +34,13 @@ function EnemyStateWalk()
 	{
 		with (oPlayer) can_move = false;
 		sees_player = true;
+		speed = 0;
+		state = EnemyStateCaughtPlayer;
 	}
-	
+}
+
+function EnemyStateCaughtPlayer()
+{
 	if (oPlayer.speed == 0 && sees_player)
 	{
 		with (oPlayer)
@@ -44,19 +49,16 @@ function EnemyStateWalk()
 			look_x = -other.look_x; look_y = -other.look_y;		
 		}
 		
+		speed = enemySpeed;
 		sees_player = false;
 		target_x = oPlayer.x - look_x * PIX;
 		target_y = oPlayer.y + look_y * PIX;
-		
-		Print(string(target_x) + ", " + string(target_y));
-		
-		state = EnemyStateCaughtPlayer;
 	}
-}
-
-function EnemyStateCaughtPlayer()
-{
-	if (point_distance(x, y, target_x, target_y) > 0)
+	else if (sees_player)
+	{
+		// do nothing	
+	}
+	else if (point_distance(x, y, target_x, target_y) > 0)
 	{
 		move_towards_point(target_x, target_y, speed);
 	}
@@ -87,6 +89,7 @@ function EnemyStateBackToWalk()
 	}
 	else
 	{
+		direction = enemyInitDir;
 		speed = 0;
 		state = EnemyStateWalk;	
 	}

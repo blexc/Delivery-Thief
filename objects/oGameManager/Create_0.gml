@@ -16,10 +16,7 @@ draw_set_font(fnText);
 
 // rooms
 game_rooms = ds_list_create();
-ds_list_add(game_rooms, rChessHouse2, rChessHouse1, r3Houses);
-
-minigame_rooms = ds_list_create();
-ds_list_add(minigame_rooms, rTicTacToe);
+ds_list_add(game_rooms, rChessHouse3, rChessHouse2, rChessHouse1, r3Houses);
 
 quarters = 1;
 

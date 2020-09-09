@@ -1,5 +1,5 @@
 // fly to toe
-if (oGM.game_over && !oGM.did_win)
+if (oETL.game_over && !oETL.did_win)
 {
 	if (distance_to_object(oToe) < 1) speed = 0;
 	else

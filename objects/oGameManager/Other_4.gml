@@ -19,8 +19,3 @@ else if (ds_list_find_index(game_rooms, room) != -1)
 		defeated_enemy = false;
 	}
 }
-else if (ds_list_find_index(minigame_rooms, room) != -1)
-{
-	// entering minigame room
-	Print("minigame room entered");
-}

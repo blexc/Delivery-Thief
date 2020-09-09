@@ -7,5 +7,4 @@ view_w_half = w/2;
 view_h_half = h/2;
 xToFollow = xstart;
 yToFollow = ystart;
-buff = 32;
 strength = 1; // less strength means stronger
