@@ -1,14 +1,19 @@
 {
   "resources": [
+    {"id":{"name":"fnTMAS","path":"fonts/fnTMAS/fnTMAS.yy",},"order":0,},
     {"id":{"name":"oTMASWater","path":"objects/oTMASWater/oTMASWater.yy",},"order":0,},
+    {"id":{"name":"oTMASMark","path":"objects/oTMASMark/oTMASMark.yy",},"order":4,},
     {"id":{"name":"sTMASTilesetSand","path":"sprites/sTMASTilesetSand/sTMASTilesetSand.yy",},"order":1,},
+    {"id":{"name":"SetDraw","path":"scripts/SetDraw/SetDraw.yy",},"order":0,},
+    {"id":{"name":"oinit","path":"objects/oinit/oinit.yy",},"order":6,},
     {"id":{"name":"oTMASPlayer","path":"objects/oTMASPlayer/oTMASPlayer.yy",},"order":1,},
-    {"id":{"name":"oTMASCamera","path":"objects/oTMASCamera/oTMASCamera.yy",},"order":3,},
     {"id":{"name":"sTMASWater","path":"sprites/sTMASWater/sTMASWater.yy",},"order":2,},
     {"id":{"name":"sTMASPlayer","path":"sprites/sTMASPlayer/sTMASPlayer.yy",},"order":0,},
+    {"id":{"name":"rinit","path":"rooms/rinit/rinit.yy",},"order":1,},
     {"id":{"name":"sTMASMark","path":"sprites/sTMASMark/sTMASMark.yy",},"order":3,},
     {"id":{"name":"tSand","path":"tilesets/tSand/tSand.yy",},"order":0,},
     {"id":{"name":"oTMAS","path":"objects/oTMAS/oTMAS.yy",},"order":2,},
+    {"id":{"name":"oTMASCamera","path":"objects/oTMASCamera/oTMASCamera.yy",},"order":5,},
     {"id":{"name":"rTMAS","path":"rooms/rTMAS/rTMAS.yy",},"order":0,},
   ],
   "Options": [
@@ -26,6 +31,7 @@
   },
   "RoomOrder": [
     {"name":"rTMAS","path":"rooms/rTMAS/rTMAS.yy",},
+    {"name":"rinit","path":"rooms/rinit/rinit.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
