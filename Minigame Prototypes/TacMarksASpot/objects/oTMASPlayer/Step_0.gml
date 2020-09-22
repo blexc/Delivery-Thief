@@ -23,33 +23,71 @@ else
 hsp = move_x * walk_sp;
 vsp = move_y * walk_sp;
 
-if (place_meeting(x+hsp, y, oTMASWater))
+if (hsp != 0)
 {
-	while(!place_meeting(x+sign(hsp), y, oTMASWater))
+	if (tilemap_get_at_pixel(col_tilemap, round(bbox_right + hsp), bbox_bottom) == 0 &&
+		tilemap_get_at_pixel(col_tilemap, round(bbox_left + hsp), bbox_bottom) == 0 &&
+		tilemap_get_at_pixel(col_tilemap, round(bbox_right + hsp), bbox_top) == 0 &&
+		tilemap_get_at_pixel(col_tilemap, round(bbox_left + hsp), bbox_top) == 0 )
 	{
-		x+=sign(hsp);
+		x += hsp;
 	}
-	hsp = 0;
-}
-
-if (place_meeting(x, y+vsp, oTMASWater))
-{
-	while(!place_meeting(x, y+sign(vsp), oTMASWater))
+	else
 	{
-		y+=sign(vsp);
+		if (hsp > 0) {
+			x = floor(x);
+			x = x- ((bbox_right) mod 16) + 16-1;
+		}
+		else if (hsp < 0)
+		{
+			x = ceil(x);
+			x = x -(bbox_left mod 16);
+		}
+		hsp = 0;
 	}
-	vsp = 0;
 }
 
-x+=hsp;
-y+=vsp;
-
-// finding the mark
-if (!oTMAS.game_over && interact && place_meeting(x, y, oTMASMark))
+if (vsp != 0)
 {
-	oTMAS.screen_transition = FADE.OUT;
-	oTMAS.did_win = true;
+	if (tilemap_get_at_pixel(col_tilemap, bbox_right, round(bbox_top + vsp)) == 0 &&
+		tilemap_get_at_pixel(col_tilemap, bbox_right, round(bbox_bottom + vsp)) == 0 &&
+		tilemap_get_at_pixel(col_tilemap, bbox_left, round(bbox_top + vsp)) == 0 &&
+		tilemap_get_at_pixel(col_tilemap, bbox_left, round(bbox_bottom + vsp)) == 0 ) 
+	{
+		y += vsp;
+	}
+	else
+	{
+		if (vsp > 0)
+		{
+			y = floor(y);
+			y = y - ((bbox_bottom) mod 16) + 16-1;
+		}
+		else if (vsp < 0)
+		{
+			y = ceil(y);
+			y = y -(bbox_top mod 16);
+		}
+		vsp = 0;
+	}
 }
+
+
+if (!oTMAS.game_over && interact)
+{
+	// finding the mark
+	if (place_meeting(x, y, oTMASMark))
+	{
+		oTMAS.screen_transition = FADE.OUT;
+		oTMAS.did_win = true;
+	}
+	else if (place_meeting(x, y, oTMASApple))
+	{
+		walk_sp *= 2;
+		instance_destroy(instance_nearest(x, y, oTMASApple));
+	}
+}
+
 
 
 

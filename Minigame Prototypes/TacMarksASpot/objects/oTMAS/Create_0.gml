@@ -32,7 +32,8 @@ time_limit = room_speed * 10;
 time_left = time_limit;
 
 // spawn the mark
-instance_create_layer(0, 0, "Instances", oTMASMark); 
+mark_id = instance_find(oTMASMark, irandom_range(0, instance_number(oTMASMark)-1));
+
 
 
 	

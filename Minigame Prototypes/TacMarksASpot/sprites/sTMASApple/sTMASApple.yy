@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 1,
   "collisionKind": 1,
   "type": 0,
   "origin": 0,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8884d8a6-3e30-4783-af4d-cb8a0f747ec4","path":"sprites/sTMASWater/sTMASWater.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8884d8a6-3e30-4783-af4d-cb8a0f747ec4","path":"sprites/sTMASWater/sTMASWater.yy",},"LayerId":{"name":"98d9e5d2-1dee-43cd-a8f1-940fcbabbb32","path":"sprites/sTMASWater/sTMASWater.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sTMASWater","path":"sprites/sTMASWater/sTMASWater.yy",},"resourceVersion":"1.0","name":"8884d8a6-3e30-4783-af4d-cb8a0f747ec4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"19ec7da8-b16e-445a-be27-f2568d6e4a9d","path":"sprites/sTMASApple/sTMASApple.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"19ec7da8-b16e-445a-be27-f2568d6e4a9d","path":"sprites/sTMASApple/sTMASApple.yy",},"LayerId":{"name":"37882c70-6da8-4f91-9d83-0e0f9b9e4b65","path":"sprites/sTMASApple/sTMASApple.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTMASApple","path":"sprites/sTMASApple/sTMASApple.yy",},"resourceVersion":"1.0","name":"19ec7da8-b16e-445a-be27-f2568d6e4a9d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sTMASWater","path":"sprites/sTMASWater/sTMASWater.yy",},
+    "spriteId": {"name":"sTMASApple","path":"sprites/sTMASApple/sTMASApple.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2bb685d9-f076-4c92-a4b8-9b77cc7883c0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8884d8a6-3e30-4783-af4d-cb8a0f747ec4","path":"sprites/sTMASWater/sTMASWater.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c2b44590-a385-403c-b57f-f798365639d0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19ec7da8-b16e-445a-be27-f2568d6e4a9d","path":"sprites/sTMASApple/sTMASApple.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sTMASWater","path":"sprites/sTMASWater/sTMASWater.yy",},
+    "parent": {"name":"sTMASApple","path":"sprites/sTMASApple/sTMASApple.yy",},
     "resourceVersion": "1.3",
-    "name": "sTMASWater",
+    "name": "sTMASApple",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"98d9e5d2-1dee-43cd-a8f1-940fcbabbb32","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"37882c70-6da8-4f91-9d83-0e0f9b9e4b65","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sTMASWater",
+  "name": "sTMASApple",
   "tags": [],
   "resourceType": "GMSprite",
 }

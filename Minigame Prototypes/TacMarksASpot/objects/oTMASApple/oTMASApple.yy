@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sTMASApple",
+    "path": "sprites/sTMASApple/sTMASApple.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -25,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oTMASWater",
+  "name": "oTMASApple",
   "tags": [],
   "resourceType": "GMObject",
 }

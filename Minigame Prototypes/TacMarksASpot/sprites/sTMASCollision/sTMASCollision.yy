@@ -1,5 +1,5 @@
 {
-  "bboxMode": 2,
+  "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
   "origin": 0,
@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 19,
+  "bbox_left": 16,
+  "bbox_right": 31,
   "bbox_top": 0,
-  "bbox_bottom": 19,
+  "bbox_bottom": 15,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 20,
-  "height": 20,
+  "width": 32,
+  "height": 16,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b1186989-0af1-4de1-abc6-b2c272c7d6ee","path":"sprites/sTMASMark/sTMASMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b1186989-0af1-4de1-abc6-b2c272c7d6ee","path":"sprites/sTMASMark/sTMASMark.yy",},"LayerId":{"name":"01b7e063-37cc-4abe-ab85-f41c261dcc1f","path":"sprites/sTMASMark/sTMASMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sTMASMark","path":"sprites/sTMASMark/sTMASMark.yy",},"resourceVersion":"1.0","name":"b1186989-0af1-4de1-abc6-b2c272c7d6ee","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ab610022-e632-455e-8cf9-81ec943c543c","path":"sprites/sTMASCollision/sTMASCollision.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ab610022-e632-455e-8cf9-81ec943c543c","path":"sprites/sTMASCollision/sTMASCollision.yy",},"LayerId":{"name":"4530d6fa-c1a9-4c19-b135-ed53c292cb03","path":"sprites/sTMASCollision/sTMASCollision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTMASCollision","path":"sprites/sTMASCollision/sTMASCollision.yy",},"resourceVersion":"1.0","name":"ab610022-e632-455e-8cf9-81ec943c543c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sTMASMark","path":"sprites/sTMASMark/sTMASMark.yy",},
+    "spriteId": {"name":"sTMASCollision","path":"sprites/sTMASCollision/sTMASCollision.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"26e09bd6-5d82-4497-8636-3e493f0b8d24","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b1186989-0af1-4de1-abc6-b2c272c7d6ee","path":"sprites/sTMASMark/sTMASMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"988b69fc-fea3-44cf-a070-b64cebbeacdf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ab610022-e632-455e-8cf9-81ec943c543c","path":"sprites/sTMASCollision/sTMASCollision.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sTMASMark","path":"sprites/sTMASMark/sTMASMark.yy",},
+    "parent": {"name":"sTMASCollision","path":"sprites/sTMASCollision/sTMASCollision.yy",},
     "resourceVersion": "1.3",
-    "name": "sTMASMark",
+    "name": "sTMASCollision",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"01b7e063-37cc-4abe-ab85-f41c261dcc1f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4530d6fa-c1a9-4c19-b135-ed53c292cb03","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sTMASMark",
+  "name": "sTMASCollision",
   "tags": [],
   "resourceType": "GMSprite",
 }
