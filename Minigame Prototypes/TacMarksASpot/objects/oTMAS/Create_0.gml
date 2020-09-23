@@ -1,10 +1,10 @@
 #macro RES_W 240
 #macro RES_H 160
 
-w = 480*2;
-h = 320*2;
-window_set_size(w, h);
+window_set_size(480*2, 320*2);
 alarm[0] = 1;
+w = display_get_gui_width();
+h = display_get_gui_height();
 
 global.k_up = vk_up;
 global.k_down = vk_down;

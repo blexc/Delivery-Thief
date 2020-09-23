@@ -57,17 +57,16 @@ else if (screen_transition == FADE.IN)
 // pre-game
 if (!game_start)
 {
-	msg = "Tac Marks A Spot!\nFind and dig up the treasure\nbefore time runs out.";
+	msg = "";
 	if (keyboard_check_pressed(global.k_interact))
 	{
 		screen_transition = FADE.OUT;
-		msg = "";
 	}
 }
 // in-game
 else if (!game_over)
 {
-	msg = string(time_left / room_speed);
+	msg = "";
 	time_left -= 1;
 	if (time_left == 0)
 	{
