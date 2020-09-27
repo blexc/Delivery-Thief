@@ -1,16 +1,26 @@
 {
   "resources": [
+    {"id":{"name":"oTMASMark","path":"objects/oTMASMark/oTMASMark.yy",},"order":8,},
     {"id":{"name":"fnTMAS","path":"fonts/fnTMAS/fnTMAS.yy",},"order":0,},
     {"id":{"name":"rTMASTitle","path":"rooms/rTMASTitle/rTMASTitle.yy",},"order":2,},
     {"id":{"name":"oTMASWater","path":"objects/oTMASWater/oTMASWater.yy",},"order":0,},
-    {"id":{"name":"oTMASMark","path":"objects/oTMASMark/oTMASMark.yy",},"order":4,},
+    {"id":{"name":"sTMASClock","path":"sprites/sTMASClock/sTMASClock.yy",},"order":10,},
+    {"id":{"name":"oTMASTreasure","path":"objects/oTMASTreasure/oTMASTreasure.yy",},"order":4,},
+    {"id":{"name":"oTMASClock","path":"objects/oTMASClock/oTMASClock.yy",},"order":10,},
     {"id":{"name":"sTMASTilesetSand","path":"sprites/sTMASTilesetSand/sTMASTilesetSand.yy",},"order":1,},
+    {"id":{"name":"sTMASTeasure","path":"sprites/sTMASTeasure/sTMASTeasure.yy",},"order":7,},
     {"id":{"name":"tWater","path":"tilesets/tWater/tWater.yy",},"order":1,},
+    {"id":{"name":"NineSliceBoxStretched","path":"scripts/NineSliceBoxStretched/NineSliceBoxStretched.yy",},"order":1,},
     {"id":{"name":"sTMASCollision","path":"sprites/sTMASCollision/sTMASCollision.yy",},"order":5,},
+    {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},"order":2,},
     {"id":{"name":"SetDraw","path":"scripts/SetDraw/SetDraw.yy",},"order":0,},
+    {"id":{"name":"oTMASTitle","path":"objects/oTMASTitle/oTMASTitle.yy",},"order":9,},
     {"id":{"name":"oinit","path":"objects/oinit/oinit.yy",},"order":6,},
+    {"id":{"name":"TMASPlayerState","path":"scripts/TMASPlayerState/TMASPlayerState.yy",},"order":3,},
     {"id":{"name":"oTMASPlayer","path":"objects/oTMASPlayer/oTMASPlayer.yy",},"order":1,},
     {"id":{"name":"sTMASPlayer","path":"sprites/sTMASPlayer/sTMASPlayer.yy",},"order":0,},
+    {"id":{"name":"sTMASNineSliceBox","path":"sprites/sTMASNineSliceBox/sTMASNineSliceBox.yy",},"order":8,},
+    {"id":{"name":"sTMASTitle","path":"sprites/sTMASTitle/sTMASTitle.yy",},"order":9,},
     {"id":{"name":"oTMASApple","path":"objects/oTMASApple/oTMASApple.yy",},"order":7,},
     {"id":{"name":"tSolid","path":"tilesets/tSolid/tSolid.yy",},"order":2,},
     {"id":{"name":"rinit","path":"rooms/rinit/rinit.yy",},"order":1,},
@@ -36,9 +46,9 @@
     "children": [],
   },
   "RoomOrder": [
-    {"name":"rTMAS","path":"rooms/rTMAS/rTMAS.yy",},
     {"name":"rinit","path":"rooms/rinit/rinit.yy",},
     {"name":"rTMASTitle","path":"rooms/rTMASTitle/rTMASTitle.yy",},
+    {"name":"rTMAS","path":"rooms/rTMAS/rTMAS.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -62,7 +72,9 @@
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Treasuremap-nRxz0.ttf","resourceType":"GMIncludedFile",},
+  ],
   "MetaData": {
     "IDEVersion": "2.3.0.529",
   },

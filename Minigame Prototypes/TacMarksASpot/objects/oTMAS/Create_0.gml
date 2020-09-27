@@ -1,22 +1,11 @@
-#macro RES_W 240
-#macro RES_H 160
-
-window_set_size(480*2, 320*2);
-alarm[0] = 1;
+draw_set_font(fnTMAS);
 w = display_get_gui_width();
 h = display_get_gui_height();
-
-global.k_up = vk_up;
-global.k_down = vk_down;
-global.k_left = vk_left;
-global.k_right = vk_right;
-global.k_interact = ord("C");
 
 game_over = false;
 game_start = false;
 did_win = false;
 msg = "";
-draw_set_font(fnTMAS);
 
 enum FADE
 {
@@ -28,12 +17,15 @@ enum FADE
 screen_transition = FADE.OFF;
 percent = 0;
 
-time_limit = room_speed * 10;
+time_max = room_speed * 30;
+time_limit = room_speed * 20;
 time_left = time_limit;
 
-// spawn the mark
-mark_id = instance_find(oTMASMark, irandom_range(0, instance_number(oTMASMark)-1));
 
+// make sure only one instance is spawned
+treasure_id = instance_find(oTMASTreasure, irandom_range(0, instance_number(oTMASTreasure)-1));
+apple_id = instance_find(oTMASApple, irandom_range(0, instance_number(oTMASApple)-1));
+clock_id = instance_find(oTMASClock, irandom_range(0, instance_number(oTMASClock)-1));
 
 
 	

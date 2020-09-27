@@ -1,3 +1,5 @@
+show_debug_message(time_left);
+
 var esc = keyboard_check_pressed(vk_escape);
 var enter = keyboard_check_pressed(vk_enter);
 
@@ -16,28 +18,17 @@ if (screen_transition == FADE.OUT)
 		screen_transition = FADE.IN;
 		if (!game_start)
 		{
+			msg = "";
 			game_start = true;
-			with (oTMASCamera)
-			{
-				w_half = cam_zoomed_in_w * 0.5;
-				h_half = cam_zoomed_in_h * 0.5;
-				camera_set_view_size(cam, w_half * 2, h_half * 2);	
-			}
-			with (oTMASMark)
-			{
-				image_alpha = 0;	
-			}
 		}
 		else
 		{
 			game_over = true;
 			with (oTMASCamera)
 			{
-				w_half = cam_zoomed_out_w * 0.5;
-				h_half = cam_zoomed_out_h * 0.5;
-				camera_set_view_size(cam, w_half * 2, h_half * 2);	
+				follow = oTMASTreasure;
 			}
-			with (oTMASMark)
+			with (oTMASTreasure)
 			{
 				image_alpha = 1;	
 			}
@@ -57,7 +48,7 @@ else if (screen_transition == FADE.IN)
 // pre-game
 if (!game_start)
 {
-	msg = "";
+	msg = "A pirate hid her\ntreasure\nin the island... Find it,\nand dig it up with 'c'.";
 	if (keyboard_check_pressed(global.k_interact))
 	{
 		screen_transition = FADE.OUT;
@@ -66,8 +57,24 @@ if (!game_start)
 // in-game
 else if (!game_over)
 {
-	msg = "";
-	time_left -= 1;
+	if (oTMASPlayer.state == TMASPlayerStateIdle)
+	{
+		msg = "";
+		time_left = clamp(time_left-1, 0, time_max);
+	}
+	else if (oTMASPlayer.found_something)
+	{
+		msg = "You found... something!";
+	}
+	else
+	{
+		// calculate closeness
+		var dist = point_distance(oTMASPlayer.x, oTMASPlayer.y, oTMASTreasure.x, oTMASTreasure.y);
+		if (dist < 16*4) msg = "You're hot!";
+		else if (dist < 16*10) msg = "You're warm.";	
+		else msg = "You're cold.";
+	}
+	
 	if (time_left == 0)
 	{
 		screen_transition = FADE.OUT;
@@ -77,7 +84,7 @@ else if (!game_over)
 // post-game
 else
 {
-	msg = "Game Over!\n";
+	msg = "Game Over! ";
 	msg += (did_win) ? "You win!" : "You lose.";
 }
 #endregion
