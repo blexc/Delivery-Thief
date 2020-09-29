@@ -78,16 +78,33 @@ function TMASPlayerStateIdle(){
 		else if (place_meeting(x, y, oTMASApple))
 		{
 			walk_sp = 2;
-			instance_destroy(instance_nearest(x, y, oTMASApple));
+			instance_nearest(x, y, oTMASApple).x = -100;
+			ds_map_replace(inventory, oTMASApple, true);
 		}
 		else if (place_meeting(x, y, oTMASClock))
 		{
-			oTMAS.time_left += 5 * room_speed;
-			instance_destroy(instance_nearest(x, y, oTMASClock));
+			oTMAS.time_left += 10 * room_speed;
+			instance_nearest(x, y, oTMASClock).x = -100;
+			ds_map_replace(inventory, oTMASClock, true);
+		}
+		else if (place_meeting(x, y, oTMASColor))
+		{
+			instance_nearest(x, y, oTMASColor).x = -100;
+			ds_map_replace(inventory, oTMASColor, true);
+		}
+		else if (place_meeting(x, y, oTMASShake))
+		{
+			instance_nearest(x, y, oTMASShake).x = -100;
+			ds_map_replace(inventory, oTMASShake, true);
 		}
 		else
 		{
 			found_something = false;	
+		}
+		
+		if (!found_something)
+		{
+			state = TMASPlayerStateIdle;
 		}
 	}
 }
