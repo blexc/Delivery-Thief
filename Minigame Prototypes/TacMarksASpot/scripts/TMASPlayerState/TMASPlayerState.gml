@@ -62,47 +62,24 @@ function TMASPlayerStateIdle(){
 			vsp = 0;
 		}
 	}
-
-
+	
 	if (oTMAS.game_start && !oTMAS.game_over && interact)
 	{
 		state = TMASPlayerStateDig;
-		found_something = true;
+		thing_found = noone;
 		alarm[0] = room_speed * 1.5;
 		
-		if (place_meeting(x, y, oTMASTreasure))
+		if (place_meeting(x, y, oTMASDirt))
 		{
-			oTMAS.screen_transition = FADE.OUT;
-			oTMAS.did_win = true;
-		}
-		else if (place_meeting(x, y, oTMASApple))
-		{
-			walk_sp = 2;
-			instance_nearest(x, y, oTMASApple).x = -100;
-			ds_map_replace(inventory, oTMASApple, true);
-		}
-		else if (place_meeting(x, y, oTMASClock))
-		{
-			oTMAS.time_left += 10 * room_speed;
-			instance_nearest(x, y, oTMASClock).x = -100;
-			ds_map_replace(inventory, oTMASClock, true);
-		}
-		else if (place_meeting(x, y, oTMASColor))
-		{
-			instance_nearest(x, y, oTMASColor).x = -100;
-			ds_map_replace(inventory, oTMASColor, true);
-		}
-		else if (place_meeting(x, y, oTMASShake))
-		{
-			instance_nearest(x, y, oTMASShake).x = -100;
-			ds_map_replace(inventory, oTMASShake, true);
-		}
-		else
-		{
-			found_something = false;	
+			with (instance_nearest(x, y, oTMASDirt))
+			{
+				other.thing_found = object_assigned;
+				instance_change(object_assigned, true);
+				script_execute(object_effect);
+			}
 		}
 		
-		if (!found_something)
+		if (thing_found == noone)
 		{
 			state = TMASPlayerStateIdle;
 		}
@@ -110,5 +87,5 @@ function TMASPlayerStateIdle(){
 }
 
 function TMASPlayerStateDig(){
-
+	// wait for alarm 0
 }

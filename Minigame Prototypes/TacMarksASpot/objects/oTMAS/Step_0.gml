@@ -1,5 +1,3 @@
-show_debug_message(time_left);
-
 var esc = keyboard_check_pressed(vk_escape);
 var enter = keyboard_check_pressed(vk_enter);
 
@@ -24,14 +22,19 @@ if (screen_transition == FADE.OUT)
 		else
 		{
 			game_over = true;
+			if (!instance_exists(oTMASTreasure))
+			{
+				with (treasure_instance)
+				{
+					instance_change(object_assigned, false);	
+				}
+			}
+
 			with (oTMASCamera)
 			{
 				follow = oTMASTreasure;
 			}
-			with (oTMASTreasure)
-			{
-				image_alpha = 1;	
-			}
+
 		}
 	}
 	exit;
@@ -57,9 +60,9 @@ if (!game_start)
 // in-game
 else if (!game_over)
 {
-	// calculate closeness
+	#region calculate closeness and perform some effects if can
 	var _color = c_white;
-	var dist = point_distance(oTMASPlayer.x, oTMASPlayer.y, oTMASTreasure.x, oTMASTreasure.y);
+	var dist = point_distance(oTMASPlayer.x, oTMASPlayer.y, treasure_instance.x, treasure_instance.y);
 	var has_shake = ds_map_find_value(oTMASPlayer.inventory, oTMASShake);
 	if (dist < 16*2)
 	{
@@ -87,15 +90,32 @@ else if (!game_over)
 	{
 		with (all) image_blend = _color;	
 	}
+	#endregion
 	
 	if (oTMASPlayer.state == TMASPlayerStateIdle)
 	{
 		msg = "";
 		time_left = clamp(time_left-1, 0, time_max);
 	}
-	else if (oTMASPlayer.found_something)
+	else if (oTMASPlayer.thing_found != noone)
 	{
-		msg = "You found... something!";
+		switch (oTMASPlayer.thing_found)
+		{
+			case oTMASColor:
+				msg = "Red is hot, Blue is cold!";
+				break;
+			case oTMASShake:
+				msg = "More shake, more treasure!";
+				break;
+			case oTMASApple:
+				msg = "yum.";
+				break;
+			case oTMASClock:
+				msg = "Time bonus.";
+				break;
+			default:
+				msg = "";
+		}
 	}
 	
 	if (time_left == 0)

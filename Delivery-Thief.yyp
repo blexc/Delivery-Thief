@@ -1,6 +1,8 @@
 {
   "resources": [
+    {"id":{"name":"sTacIdle","path":"sprites/sTacIdle/sTacIdle.yy",},"order":6,},
     {"id":{"name":"InitTicTacToe","path":"scripts/InitTicTacToe/InitTicTacToe.yy",},"order":2,},
+    {"id":{"name":"sTacWalk","path":"sprites/sTacWalk/sTacWalk.yy",},"order":5,},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},"order":9,},
     {"id":{"name":"rETLInit","path":"rooms/rETLInit/rETLInit.yy",},"order":1,},
     {"id":{"name":"sEnemyTarget","path":"sprites/sEnemyTarget/sEnemyTarget.yy",},"order":2,},

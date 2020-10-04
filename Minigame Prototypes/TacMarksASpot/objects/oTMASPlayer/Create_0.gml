@@ -2,7 +2,9 @@ state = TMASPlayerStateIdle;
 walk_sp = 1;
 hsp = 0;
 vsp = 0;
-found_something = false;
+thing_found = noone;
+near_dirt = false;
+rect_size = bbox_right-bbox_left; // for draw event
 
 col_tilemap = layer_tilemap_get_id(layer_get_id("Collision"));
 

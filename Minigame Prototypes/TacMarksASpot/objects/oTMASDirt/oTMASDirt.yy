@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTMASShake",
-    "path": "sprites/sTMASShake/sTMASShake.yy",
+    "name": "sTMASDirt",
+    "path": "sprites/sTMASDirt/sTMASDirt.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,17 +20,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oTMASShake","path":"objects/oTMASShake/oTMASShake.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  "eventList": [],
+  "properties": [
+    {"varType":5,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"object_assigned","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Items",
-    "path": "folders/Objects/Items.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oTMASShake",
+  "name": "oTMASDirt",
   "tags": [],
   "resourceType": "GMObject",
 }
