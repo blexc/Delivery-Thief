@@ -46,8 +46,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Minigames",
-    "path": "folders/Rooms/Minigames.yy",
+    "name": "ETL",
+    "path": "folders/Rooms/Minigames/ETL.yy",
   },
   "resourceVersion": "1.0",
   "name": "rETLInit",

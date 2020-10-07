@@ -1,10 +1,8 @@
 {
   "resources": [
     {"id":{"name":"sTMASDirt","path":"sprites/sTMASDirt/sTMASDirt.yy",},"order":13,},
-    {"id":{"name":"oTMASMark","path":"objects/oTMASMark/oTMASMark.yy",},"order":8,},
     {"id":{"name":"fnTMAS","path":"fonts/fnTMAS/fnTMAS.yy",},"order":0,},
     {"id":{"name":"rTMASTitle","path":"rooms/rTMASTitle/rTMASTitle.yy",},"order":2,},
-    {"id":{"name":"oTMASWater","path":"objects/oTMASWater/oTMASWater.yy",},"order":0,},
     {"id":{"name":"TMASEffects","path":"scripts/TMASEffects/TMASEffects.yy",},"order":5,},
     {"id":{"name":"sTMASClock","path":"sprites/sTMASClock/sTMASClock.yy",},"order":10,},
     {"id":{"name":"oTMASTreasure","path":"objects/oTMASTreasure/oTMASTreasure.yy",},"order":4,},

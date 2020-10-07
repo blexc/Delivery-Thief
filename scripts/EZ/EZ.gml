@@ -1,3 +1,17 @@
+function ScreenShake(_strength, _duration, _frequency)
+{
+	if (instance_exists(oTMASCamera))
+	{
+		with (oTMASCamera)
+		{
+			shake_remain = _strength;
+			shake_mag = _strength;
+			shake_length = _duration;
+			shake_interval = _frequency;
+		}
+	}
+}
+
 function Deg2Cardinal(direction_degrees){
 	return floor(direction_degrees/90);
 }
