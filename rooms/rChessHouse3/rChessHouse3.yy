@@ -52,6 +52,7 @@
             {"propertyId":{"name":"enemyMinigameDifficulty","path":"objects/pEnemy/pEnemy.yy",},"objectId":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"enemyMinigameRoom","path":"objects/pEnemy/pEnemy.yy",},"objectId":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"value":"rETLInit","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oToe","path":"objects/oToe/oToe.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":96.0,"resourceVersion":"1.0","name":"inst_37B78800","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oRustyChessPieces","path":"objects/oRustyChessPieces/oRustyChessPieces.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":496.0,"y":416.0,"resourceVersion":"1.0","name":"inst_2C6B411","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":-500,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tShade","path":"tilesets/tShade/tShade.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":40,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,
@@ -226,6 +227,7 @@
     {"name":"inst_FD45F7C","path":"rooms/rChessHouse3/rChessHouse3.yy",},
     {"name":"inst_4C6070D9","path":"rooms/rChessHouse3/rChessHouse3.yy",},
     {"name":"inst_5426239","path":"rooms/rChessHouse3/rChessHouse3.yy",},
+    {"name":"inst_2C6B411","path":"rooms/rChessHouse3/rChessHouse3.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,

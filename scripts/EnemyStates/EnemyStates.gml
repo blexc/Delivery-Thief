@@ -11,7 +11,7 @@ function EnemyStateWalk()
 	if (speed == 0 && array_length(enemyTargetInstances) > 0)
 	{
 		target_index++;
-		if (target_index < array_length(enemyTargetInstances))
+		if (target_index >= 0 && target_index < array_length(enemyTargetInstances))
 		{
 			target_x = enemyTargetInstances[target_index].x;
 			target_y = enemyTargetInstances[target_index].y;

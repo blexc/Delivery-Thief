@@ -1,7 +1,7 @@
 /// @desc inventory
 
 // set up item grid
-items = ds_grid_create(4, 3);
+items = ds_grid_create(6, 3);
 for (var r=0; r < ds_grid_height(items); r+=1)
 {
 	for (var c=0; c < ds_grid_width(items); c+=1)

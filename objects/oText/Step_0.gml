@@ -1,10 +1,12 @@
-lerp_progress += (1-lerp_progress)/50;
 text_progress += global.text_speed;
 
+/* // animate text box
+lerp_progress += (1-lerp_progress)/50;
 x1 = lerp(x1, x1_target, lerp_progress);
 x2 = lerp(x2, x2_target, lerp_progress);
 y1 = lerp(y1, y1_target, lerp_progress);
 y2 = lerp(y2, y2_target, lerp_progress);
+*/
 
 // cycle thru responses
 var up = keyboard_check_pressed(global.k_up);
@@ -24,15 +26,11 @@ if (keyboard_check_pressed(global.k_interact))
 		if (responses[0] != -1)
 		{
 			with (origin_instance)
-			{
 				DialogueResponses(other.response_scripts[other.response_selected]);
-			}
 		}
 		instance_destroy();
 		if (instance_exists(oTextQueued))
-		{
 			with (oTextQueued) ticket--;	
-		}
 		else
 		{
 			with (oPlayer)
@@ -43,7 +41,5 @@ if (keyboard_check_pressed(global.k_interact))
 		}
 	}
 	else if (text_progress > 2)
-	{
 		text_progress = _msg_len;	
-	}
 }	

@@ -1,6 +1,5 @@
 if (global.paused)
 {
-	var up, down, left, right, menu, interact, move_x, move_y;
 	up = keyboard_check_pressed(global.k_up);
 	down = keyboard_check_pressed(global.k_down);
 	left = keyboard_check_pressed(global.k_left);
@@ -12,7 +11,7 @@ if (global.paused)
 
 	col = clamp(col+move_x, 0, ds_grid_width(oInventory.items)-1);
 	row = clamp(row+move_y, 0, ds_grid_height(oInventory.items)-1);
-
+	
 	selected_alpha = (interact) ? selected_alpha_pressed : selected_alpha_normal;
 	
 	if (interact && combine_c == col && combine_r == row)

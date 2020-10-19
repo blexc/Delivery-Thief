@@ -1,7 +1,7 @@
-if (global.paused)
+Print("alarm: " + string(alarm[0]));
+if (global.paused || alarm[0] != -1)
 {
-	alarm[0]++;
-	alarm[1]++;	
+	if (global.paused) alarm[0] = 2;
 	speed = 0;
 	exit;
 }

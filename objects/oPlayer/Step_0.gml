@@ -1,4 +1,18 @@
-if (can_move && !global.paused)
+if (keyboard_check_pressed(vk_escape))
+	game_end();
+	
+// if you're not talking to somebody... pause
+if (keyboard_check_pressed(global.k_menu) && can_move)
+	global.paused = !global.paused;
+
+if (global.paused)
+{
+	speed = 0;
+	exit;
+}
+
+
+if (can_move)
 {
 	up = keyboard_check(global.k_up);
 	down = keyboard_check(global.k_down);
