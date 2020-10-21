@@ -41,7 +41,6 @@ script_execute(state);
 
 // animations
 image_alpha = (invunerable) ? 0.25 : 1;
-depth = -bbox_bottom;
 
 var _old_sprite = sprite_index;
 sprite_index = (speed == 0) ? sprite_idle : sprite_walk;

@@ -1,3 +1,5 @@
+if(layer_exists("Solid")) layer_set_visible("Solid", false);
+
 if (room == rInit)
 {
 	SlideTransition(TRANS_MODE.GOTO, r3Houses);
@@ -5,7 +7,6 @@ if (room == rInit)
 else if (ds_list_find_index(game_rooms, room) != -1)
 {
 	// entering game room
-	Print("game room entered");
 	room_persistent = false;
 
 	if (cur_enemy_instance_id != -1)

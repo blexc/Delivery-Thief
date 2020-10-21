@@ -4,7 +4,7 @@
     "path": "sprites/sEnemyTarget/sEnemyTarget.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

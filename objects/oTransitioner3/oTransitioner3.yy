@@ -4,7 +4,7 @@
     "path": "sprites/sTransitioner3/sTransitioner3.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

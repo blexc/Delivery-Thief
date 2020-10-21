@@ -4,7 +4,7 @@
     "path": "sprites/sSpawner2/sSpawner2.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

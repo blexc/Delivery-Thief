@@ -1,4 +1,3 @@
-Print("alarm: " + string(alarm[0]));
 if (global.paused || alarm[0] != -1)
 {
 	if (global.paused) alarm[0] = 2;

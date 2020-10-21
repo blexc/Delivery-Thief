@@ -1,3 +1,5 @@
+// should be first thing created...
+
 surface_resize(application_surface, WIN_W, WIN_H);
 
 // global input vars
@@ -15,3 +17,4 @@ cur_enemy_instance_id = -1;
 cur_enemy_minigame_difficulty = 1;
 defeated_enemy = false;
 last_room = room;
+
