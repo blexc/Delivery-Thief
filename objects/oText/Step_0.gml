@@ -2,7 +2,6 @@
 
 text_progress += global.text_speed;
 if (dont_take_input) exit; // skip input!
-debug("taking input..." + string(text_progress));
 
 // cycle thru responses
 var up = keyboard_check_pressed(global.k_up);

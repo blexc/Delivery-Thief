@@ -22,7 +22,7 @@ function AddToInventory(instance, grid){
 			}
 		}
 	}
-	Print("warning: could not add to grid, too full!");
+	debug("warning: could not add to grid, too full!");
 	return false;
 }
 
@@ -44,7 +44,13 @@ function CombineFromInventory(inventory, inst1, inst2, grid){
 		new_obj = ds_map_find_value(inventory.combinations, pair);
 	}
 	
-	// add resultant instect, remove original two instects
+	// make sure if you're holding the item, it is discarded
+	if (inst1 == oInventory.item_held || inst2 == oInventory.item_held)
+	{
+		oInventory.item_held = noone;
+	}
+	
+	// add resultant instect, remove original two instants
 	if (new_obj != undefined)
 	{
 		RemoveFromInventory(inst1, inventory.items);

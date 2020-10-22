@@ -14,3 +14,5 @@ for (var r=0; r < ds_grid_height(items); r+=1)
 combinations = ds_map_create();
 AddCombination(combinations, oCloth, oRustyChessPieces, oChessPieces);
 AddCombination(combinations, oChessPieces, oBoard, oFakeChessBoard);
+
+item_held = noone; // current item held (and to iteract with)

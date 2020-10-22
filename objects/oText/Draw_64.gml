@@ -17,4 +17,4 @@ if (!dont_take_input && responses[0] != -1 && text_progress >= string_length(msg
 }
 
 SetDraw(c_white, fa_center, fa_top, 1);
-draw_text((tb_x1+tb_x2)/2, tb_y1+8, _print);
+draw_text_ext((tb_x1+tb_x2)/2, tb_y1+8, _print, -1, tb_x2-tb_x1-2*PIX);

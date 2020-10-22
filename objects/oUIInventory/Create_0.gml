@@ -16,6 +16,7 @@ menu = 0;
 interact = 0; 
 move_x = 0; 
 move_y = 0;
+choosing_option = false;
 
 s = 28; // size of inventory boxes
 buf = 4; // buffer

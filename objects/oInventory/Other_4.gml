@@ -12,3 +12,8 @@ for (var r=0; r < ds_grid_height(items); r+=1)
 		}
 	}
 }
+
+if (item_held != noone)
+{
+	item_held = instance_create_layer(0, 0, "Instances", item_held);
+}

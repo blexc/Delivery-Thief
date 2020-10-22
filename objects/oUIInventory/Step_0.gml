@@ -1,66 +1,82 @@
 /// @description oUIInventory Step
 
-up = keyboard_check_pressed(global.k_up);
-down = keyboard_check_pressed(global.k_down);
-left = keyboard_check_pressed(global.k_left);
-right = keyboard_check_pressed(global.k_right);
-menu = keyboard_check_pressed(global.k_menu);
-interact = keyboard_check_pressed(global.k_interact);
+if (!choosing_option)
+{
+	up = keyboard_check_pressed(global.k_up);
+	down = keyboard_check_pressed(global.k_down);
+	left = keyboard_check_pressed(global.k_left);
+	right = keyboard_check_pressed(global.k_right);
+	menu = keyboard_check_pressed(global.k_menu);
+	interact = keyboard_check_pressed(global.k_interact);
+}
+else
+{
+	up = 0;
+	down = 0;
+	left = 0;
+	right = 0;
+	menu = 0;
+	interact = 0;
+}
+
 move_x = right - left;
 move_y = down - up;
 
 var _old_col = col; var _old_row = row;
 col = clamp(col+move_x, 0, ds_grid_width(oInventory.items)-1);
 row = clamp(row+move_y, 0, ds_grid_height(oInventory.items)-1);
+selected_alpha = (interact) ? selected_alpha_pressed : selected_alpha_normal;
 
+// when you move your 'cursor'/selection in the grid
 if (_old_col != col || _old_row != row)
 {
-	// change textbox to have name of object + description
+	alarm[0] = -1; // cancel resetting text.
 	var msg = "";
 	var inst_selected = ds_grid_get(oInventory.items, col, row);
 	if (inst_selected != noone) msg = inst_selected.title + "\n" + inst_selected.desc;
 
-	ModifyTextBox(my_textbox, msg);	
+	instance_destroy(my_textbox);
+	my_textbox = NewTextBox(msg, undefined, true);
 }
 
-selected_alpha = (interact) ? selected_alpha_pressed : selected_alpha_normal;
+// when you click on something in the grid...
+if (interact) 
+{
+	alarm[0] = -1; // cancel resetting text.
+	var _on_nothing = ds_grid_get(oInventory.items, col, row) == noone;
 	
-if (interact && combine_c == col && combine_r == row)
-{
-	combine_c = -1;
-	combine_r = -1;
-}
-else if (interact && ds_grid_get(oInventory.items, col, row) != noone)
-{
-	// TODO ask what you want to do with the item
-	// 1 combine with something
-	// 2 hold (outside of pause to interact)
-	// 3 nothing
-		
-	/*
-	with (instance_create_layer(x, y, "Instances", oText))
+	// error checking
+	if (combine_c == col && combine_r == row)
 	{
-		msg = "What would you like to do?\n" +
-				"1 Combine\n" +
-				"2 Hold\n" +
-				"3 Nothing\n";
+		instance_destroy(my_textbox);
+		my_textbox = NewTextBox("can't combine with itself!", undefined, true);
+		combine_c = -1;
+		combine_r = -1;
 	}
-	*/
-		
-	if (combine_c != -1 && combine_r != -1)
+	// combine with selected items
+	else if (!_on_nothing && combine_c != -1 && combine_r != -1)
 	{
-		CombineFromInventory(
+		var _did_combine = CombineFromInventory(
 			oInventory,
 			ds_grid_get(oInventory.items, col, row),
 			ds_grid_get(oInventory.items, combine_c, combine_r),
 			oInventory.items);
-
+		
 		combine_c = -1;
 		combine_r = -1;
+		
+		instance_destroy(my_textbox);
+		var _msg = (_did_combine) ? "Combined." : "You can't combine those!";
+		my_textbox = NewTextBox(_msg, undefined, true);
 	}
-	else
+	// ask what you want to do with the item
+	else if (!_on_nothing)
 	{
-		combine_c = col;
-		combine_r = row;		
+		choosing_option = true;
+		msg = "What would you like to do?";
+		var options = ["3:Combine", "4:Hold", "5:Nothing"];
+		instance_destroy(my_textbox);
+		my_textbox = NewTextBox(msg, options, false);
 	}
 }
+

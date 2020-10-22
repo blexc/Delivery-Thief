@@ -46,4 +46,4 @@ for (var r=inv_height-1; r >= 0; r-=1)
 			draw_sprite_stretched(inst.sprite_index, 0, x1+3, y1+3, s-6, s-6);
 	}
 }
-
+draw_set_alpha(1);

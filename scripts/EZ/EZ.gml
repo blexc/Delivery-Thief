@@ -101,16 +101,6 @@ function NewTextBox(_msg, _responses, _dont_take_input){
 	return _inst;
 }
 
-function ModifyTextBox(_inst, _msg)
-{
-	with (_inst)
-	{
-		msg = _msg;
-		text_progress = 0;
-	}
-	
-}
-
 function NineSliceBoxStretched(_sprite, _x1, _y1, _x2, _y2){
 	var _size = sprite_get_width(_sprite) / 3;
     var _w = _x2 - _x1;
