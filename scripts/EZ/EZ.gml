@@ -58,17 +58,26 @@ function SlideTransition(_mode, _targetroom){
 	}
 }
 
-function NewTextBox(_msg, _responses){
+function NewTextBox(_msg, _responses, _dont_take_input){
 	if (0) return argument[0];	// gets rid of error msg about parameter count
 	var _obj;
 	if (instance_exists(oText)) _obj = oTextQueued;
 	else _obj = oText;
 	
-	with (instance_create_layer(0, 0, "Instances", _obj))
+	var _inst = instance_create_layer(0, 0, "Instances", _obj);
+	
+	with (_inst)
 	{
 		msg = _msg;
+		
 		if (instance_exists(other)) origin_instance = other.id;
 		else origin_instance = noone;
+		
+		dont_take_input = false; // DO take input, unless explicitly mentioned
+		if (_dont_take_input != undefined)
+		{
+			dont_take_input = _dont_take_input;
+		}	
 		
 		responses = [-1];
 		response_scripts = [-1];
@@ -87,10 +96,19 @@ function NewTextBox(_msg, _responses){
 		}
 	}
 	
-	with (oPlayer)
+	with (oPlayer) can_move = false;
+	
+	return _inst;
+}
+
+function ModifyTextBox(_inst, _msg)
+{
+	with (_inst)
 	{
-		can_move = false;
+		msg = _msg;
+		text_progress = 0;
 	}
+	
 }
 
 function NineSliceBoxStretched(_sprite, _x1, _y1, _x2, _y2){

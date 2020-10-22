@@ -2,15 +2,19 @@ if (keyboard_check_pressed(vk_escape))
 	game_end();
 	
 // if you're not talking to somebody... pause
-if (keyboard_check_pressed(global.k_menu) && can_move)
+if (keyboard_check_pressed(global.k_menu) && 
+	(can_move || instance_exists(oUIInventory)))
+{
 	global.paused = !global.paused;
+	if (global.paused) ShowInventory();
+	else HideInventory();
+}
 
 if (global.paused)
 {
 	speed = 0;
 	exit;
 }
-
 
 if (can_move)
 {

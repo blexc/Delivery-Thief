@@ -3,7 +3,6 @@
 surface_resize(application_surface, WIN_W, WIN_H);
 
 // global input vars
-
 draw_set_font(fnText);
 
 // rooms
