@@ -28,6 +28,8 @@
   "overriddenProperties": [
     {"propertyId":{"name":"title","path":"objects/pCollectible/pCollectible.yy",},"objectId":{"name":"pCollectible","path":"objects/pCollectible/pCollectible.yy",},"value":"\"Chess Board\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"desc","path":"objects/pCollectible/pCollectible.yy",},"objectId":{"name":"pCollectible","path":"objects/pCollectible/pCollectible.yy",},"value":"\"Apparently famous.\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"entityActivateScript","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"ChessBoardEvents","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"entityActivateArgs","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"[]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Collectibles",

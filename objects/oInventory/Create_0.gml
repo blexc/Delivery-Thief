@@ -15,4 +15,8 @@ combinations = ds_map_create();
 AddCombination(combinations, oCloth, oRustyChessPieces, oChessPieces);
 AddCombination(combinations, oChessPieces, oBoard, oFakeChessBoard);
 
-item_held = noone; // current item held (and to iteract with)
+// initial item (for debug), noone by default
+var _obj = oFakeChessBoard;
+ds_grid_set(items, 0, 0, _obj);
+item_held = _obj; // current item held (and to iteract with)
+

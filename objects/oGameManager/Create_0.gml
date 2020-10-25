@@ -1,6 +1,10 @@
 // should be first thing created...
 
-surface_resize(application_surface, WIN_W, WIN_H);
+InitGlobalsMacros();
+
+// create pixel perfect full screen
+scale = 3;
+InitPixelPerfect();
 
 // global input vars
 draw_set_font(fnText);

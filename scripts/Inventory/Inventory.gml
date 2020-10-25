@@ -85,6 +85,20 @@ function IsInInventory(_obj, _can_delete){
 	}
 }
 
+// check if you're holding _obj in your immediate item slot
+function IsHolding(_obj, _can_delete)
+{
+	with (oInventory)
+	{
+		if (item_held.object_index == _obj)
+		{
+			if (_can_delete) RemoveFromInventory(item_held, items);
+			return true;
+		}
+	}
+	return false;
+}
+
 /// @description CombineFromInventory(object, grid)
 /// @arg object
 /// @arg grid
@@ -98,7 +112,14 @@ function RemoveFromInventory(object, grid){
 	var row = ds_grid_value_y(grid, 0, 0, w-1, h-1, object);
 	
 	if (col == -1 || row == -1) return false;
-
-	instance_destroy(ds_grid_get(grid, col, row));
+	
+	// make sure to remove item from hand
+	var _inst = ds_grid_get(grid, col, row);
+	if (_inst == oInventory.item_held)
+	{
+		oInventory.item_held = noone;
+	}
+	instance_destroy(_inst);
 	ds_grid_set(grid, col, row, noone);
+	return true;
 }

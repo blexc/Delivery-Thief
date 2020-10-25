@@ -3,8 +3,8 @@
 // draw the items
 var sx = buf;
 var sy = buf;
-var ex = WIN_W-buf;
-var ey = WIN_H-(2*32)+buf;
+var ex = display_get_gui_width() - buf;
+var ey = display_get_gui_height()-(2*32)+buf;
 	
 NineSliceBoxStretched(sTextBoxBg, sx, sy, ex, ey);
 	

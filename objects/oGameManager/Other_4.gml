@@ -1,8 +1,8 @@
 if(layer_exists("Solid")) layer_set_visible("Solid", false);
 
-if (room == rInit)
+if (room == rInit && alarm[0] == -1)
 {
-	SlideTransition(TRANS_MODE.GOTO, r3Houses);
+	alarm[0] = 15;
 }
 else if (ds_list_find_index(game_rooms, room) != -1)
 {

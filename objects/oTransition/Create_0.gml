@@ -1,5 +1,5 @@
-w = WIN_W;
-h = WIN_H;
+w = window_get_width();
+h = window_get_height();
 
 enum TRANS_MODE
 {
