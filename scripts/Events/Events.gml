@@ -1,12 +1,16 @@
 function RomanEvents(){
-	with (oRoman)
+	with (instance_nearest(oPlayer.x, oPlayer.y, oRoman))
 	{
 		if (global.quest_complete)
 		{
 			NewTextBox("Thank You!");
 		}
+		else if (IsHolding(oFakeChessBoard, false))
+		{
+			NewTextBox("I don't want this. I want a real one!");
+		}
 		// if player has real chess board
-		else if (IsInInventory(oChessBoard, true))
+		else if (IsHolding(oChessBoard, true))
 		{
 			NewTextBox("Thank You!");
 			oGameManager.quarters += 5;
@@ -21,7 +25,7 @@ function RomanEvents(){
 
 function ChessBoardEvents()
 {
-	with (oChessBoard) // TODO THIS IS BEING CALLED TWICE BC THERES TWO CHESSBOARDS IN A SCENE...
+	with (instance_nearest(oPlayer.x, oPlayer.y, oChessBoard))
 	{
 		if (IsHolding(oFakeChessBoard, true))
 		{
@@ -30,9 +34,20 @@ function ChessBoardEvents()
 			AddToInventory(self, oInventory.items);
 			NewTextBox("Carefully swapped fake chess board with the real chess board.");
 		}
-		else
+		else NewTextBox("You can't just take it!");	
+	}
+}
+
+function DoorEvent()
+{
+	if (IsInInventory(oKey, false))
+	{
+		if (oPlayer.can_move)
 		{
-			NewTextBox("You can't just take it!");	
+			oGameManager.spawner = spawner_num;
+			oPlayer.can_move = false;
+			SlideTransition(TRANS_MODE.GOTO, target);
 		}
 	}
+	else NewTextBox("You need a key to enter.");
 }

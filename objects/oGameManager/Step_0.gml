@@ -1,6 +1,7 @@
 
 // debug operations...
 if (keyboard_check_pressed(vk_enter)) game_restart();
+if (keyboard_check_pressed(vk_escape)) game_end();
 if (keyboard_check_pressed(ord("Z")))
 {
 	scale = scale+1
@@ -11,8 +12,6 @@ if (keyboard_check_pressed(ord("Z")))
 
 // fullscreen
 if (keyboard_check_pressed(ord("F")) && keyboard_check(vk_control))
-{
 	window_set_fullscreen(!window_get_fullscreen());
-}
 	
 

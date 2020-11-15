@@ -2,15 +2,21 @@
 
 var item=0;
 // quarter
-SetDraw(c_white, fa_left, fa_center, 1);
+SetDraw(c_white, fa_left, fa_top, 1);
 draw_sprite(sQuarter, 0, PIX*item++, 0);
-draw_text(PIX*item++, 0, " x" + string(oGameManager.quarters));
+draw_text(PIX * item - 2 , 4, " x" + string(oGameManager.quarters));
+item+=2;
 
 // item held
 if (oInventory.item_held != noone)// && instance_exists(oInventory.item_held))
-{
 	draw_sprite(oInventory.item_held.sprite_index, 0, PIX*item++, 0);
-}
+
+
+
+
+
+
+
 
 /* debug prints
 SetDraw(c_white, fa_right, fa_top, 1);

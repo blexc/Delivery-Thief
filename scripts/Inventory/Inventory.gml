@@ -99,7 +99,7 @@ function IsHolding(_obj, _can_delete)
 	return false;
 }
 
-/// @description CombineFromInventory(object, grid)
+/// @description RemoveFromInventory(object, grid)
 /// @arg object
 /// @arg grid
 // returns false if could not find object

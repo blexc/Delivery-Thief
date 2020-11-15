@@ -26,10 +26,10 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"parent":{"name":"oTransitioner3","path":"objects/oTransitioner3/oTransitioner3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [
-    {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"target","tags":[],"resourceType":"GMObjectProperty",},
+  "properties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"spawner_num","path":"objects/pTransitioner/pTransitioner.yy",},"objectId":{"name":"pTransitioner","path":"objects/pTransitioner/pTransitioner.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
-  "overriddenProperties": [],
   "parent": {
     "name": "Transitions",
     "path": "folders/Objects/Transitions.yy",

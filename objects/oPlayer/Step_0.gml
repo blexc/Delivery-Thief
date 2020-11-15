@@ -1,5 +1,4 @@
-if (keyboard_check_pressed(vk_escape))
-	game_end();
+
 	
 // if you're not talking to somebody... pause
 if (keyboard_check_pressed(global.k_menu) && 

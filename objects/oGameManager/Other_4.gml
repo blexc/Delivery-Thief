@@ -26,4 +26,6 @@ else if (ds_list_find_index(game_rooms, room) != -1)
 	
 	// create and display game UI display it
 	instance_create_layer(0, 0, "Instances", oUIGame);
+	
+	draw_set_font(fnText);
 }
