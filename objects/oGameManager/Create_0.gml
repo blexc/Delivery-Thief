@@ -13,7 +13,7 @@ draw_set_font(fnText);
 game_rooms = ds_list_create();
 ds_list_add(game_rooms, rChessHouse3, rChessHouse2, rChessHouse1, r3Houses);
 
-quarters = 99;
+quarters = 3;
 
 spawner = -1; // -1 for init_spawn; 0 for minigame; 1, 2, 3, etc. for numbered spawners
 cur_enemy_instance_id = -1;

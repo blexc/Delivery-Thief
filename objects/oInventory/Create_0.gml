@@ -16,7 +16,7 @@ AddCombination(combinations, oCloth, oRustyChessPieces, oChessPieces);
 AddCombination(combinations, oChessPieces, oBoard, oFakeChessBoard);
 
 // initial item (for debug), noone by default
-var _obj = oFakeChessBoard;
+var _obj = noone;
 ds_grid_set(items, 0, 0, _obj);
 item_held = _obj; // current item held (and to iteract with)
 

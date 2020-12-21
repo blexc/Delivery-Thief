@@ -34,6 +34,8 @@ function AddToInventory(instance, grid){
 // returns false if could not combine
 function CombineFromInventory(inventory, inst1, inst2, grid){
 	// try once
+	if (inst1 == noone || inst2 == noone) return false;
+	
 	var pair = string(inst1.object_index) + " " + string(inst2.object_index);
 	var new_obj = ds_map_find_value(inventory.combinations, pair);
 	
@@ -90,7 +92,7 @@ function IsHolding(_obj, _can_delete)
 {
 	with (oInventory)
 	{
-		if (item_held.object_index == _obj)
+		if (item_held != noone && item_held.object_index == _obj)
 		{
 			if (_can_delete) RemoveFromInventory(item_held, items);
 			return true;
