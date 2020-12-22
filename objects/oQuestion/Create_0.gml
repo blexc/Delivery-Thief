@@ -1,0 +1,1 @@
+triggered_txt_box = false;

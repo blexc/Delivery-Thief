@@ -59,7 +59,6 @@
 2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,2147483648,
 ],},"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Solid","tags":[],"resourceType":"GMRTileLayer",},
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"oBoard","path":"objects/oBoard/oBoard.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":512.0,"y":320.0,"resourceVersion":"1.0","name":"inst_4D087EB7","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oTorch","path":"objects/oTorch/oTorch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":176.0,"y":256.0,"resourceVersion":"1.0","name":"inst_DAB1713","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oTorch","path":"objects/oTorch/oTorch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":240.0,"y":256.0,"resourceVersion":"1.0","name":"inst_CBEB7D9","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oTorch","path":"objects/oTorch/oTorch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":304.0,"y":256.0,"resourceVersion":"1.0","name":"inst_3094BCC1","tags":[],"resourceType":"GMRInstance",},
@@ -91,6 +90,10 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oEnemyTarget","path":"objects/oEnemyTarget/oEnemyTarget.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":368.0,"resourceVersion":"1.0","name":"inst_7901C5CB","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oEnemyTarget","path":"objects/oEnemyTarget/oEnemyTarget.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":368.0,"resourceVersion":"1.0","name":"inst_2272AE35","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oEnemyTarget","path":"objects/oEnemyTarget/oEnemyTarget.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":304.0,"resourceVersion":"1.0","name":"inst_63054D1E","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"msg","path":"objects/oQuestion/oQuestion.yy",},"objectId":{"name":"oQuestion","path":"objects/oQuestion/oQuestion.yy",},"value":"\"press a to open/close menu..\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"oQuestion","path":"objects/oQuestion/oQuestion.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":368.0,"resourceVersion":"1.0","name":"inst_47F5667B","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oCloth","path":"objects/oCloth/oCloth.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":480.0,"y":336.0,"resourceVersion":"1.0","name":"inst_578285F0","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":1700,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tShade","path":"tilesets/tShade/tShade.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":40,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,
@@ -182,7 +185,6 @@
   "creationCodeFile": "",
   "inheritCode": true,
   "instanceCreationOrder": [
-    {"name":"inst_4D087EB7","path":"rooms/rChessHouse1/rChessHouse1.yy",},
     {"name":"inst_DAB1713","path":"rooms/rChessHouse1/rChessHouse1.yy",},
     {"name":"inst_CBEB7D9","path":"rooms/rChessHouse1/rChessHouse1.yy",},
     {"name":"inst_3094BCC1","path":"rooms/rChessHouse1/rChessHouse1.yy",},
@@ -206,6 +208,8 @@
     {"name":"inst_7901C5CB","path":"rooms/rChessHouse1/rChessHouse1.yy",},
     {"name":"inst_2272AE35","path":"rooms/rChessHouse1/rChessHouse1.yy",},
     {"name":"inst_63054D1E","path":"rooms/rChessHouse1/rChessHouse1.yy",},
+    {"name":"inst_47F5667B","path":"rooms/rChessHouse1/rChessHouse1.yy",},
+    {"name":"inst_578285F0","path":"rooms/rChessHouse1/rChessHouse1.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,

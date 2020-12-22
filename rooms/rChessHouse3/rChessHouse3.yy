@@ -100,9 +100,12 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oEnemyTarget","path":"objects/oEnemyTarget/oEnemyTarget.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":304.0,"y":96.0,"resourceVersion":"1.0","name":"inst_FD45F7C","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oSpawner3","path":"objects/oSpawner3/oSpawner3.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":352.0,"resourceVersion":"1.0","name":"inst_4C6070D9","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
-            {"propertyId":{"name":"target","path":"objects/oTransitioner3/oTransitioner3.yy",},"objectId":{"name":"oTransitioner3","path":"objects/oTransitioner3/oTransitioner3.yy",},"value":"r3Houses","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"oTransitioner3","path":"objects/oTransitioner3/oTransitioner3.yy",},"objectId":{"name":"oTransitioner3","path":"objects/oTransitioner3/oTransitioner3.yy",},"value":"r3Houses","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"target","path":"objects/pTransitioner/pTransitioner.yy",},"objectId":{"name":"pTransitioner","path":"objects/pTransitioner/pTransitioner.yy",},"value":"r3Houses","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oTransitioner3","path":"objects/oTransitioner3/oTransitioner3.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":176.0,"y":368.0,"resourceVersion":"1.0","name":"inst_5426239","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"msg","path":"objects/oQuestion/oQuestion.yy",},"objectId":{"name":"oQuestion","path":"objects/oQuestion/oQuestion.yy",},"value":"\"in the menu, you can combine items.\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"oQuestion","path":"objects/oQuestion/oQuestion.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":560.0,"y":432.0,"resourceVersion":"1.0","name":"inst_2BE00519","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":1700,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tShade","path":"tilesets/tShade/tShade.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":40,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,
@@ -227,6 +230,7 @@
     {"name":"inst_FD45F7C","path":"rooms/rChessHouse3/rChessHouse3.yy",},
     {"name":"inst_4C6070D9","path":"rooms/rChessHouse3/rChessHouse3.yy",},
     {"name":"inst_5426239","path":"rooms/rChessHouse3/rChessHouse3.yy",},
+    {"name":"inst_2BE00519","path":"rooms/rChessHouse3/rChessHouse3.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,
