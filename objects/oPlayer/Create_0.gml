@@ -1,5 +1,4 @@
-moving = false;
 move_speed = 2;
-xtarget = xstart;
-ytarget = ystart;
 can_move = true;
+xvelocity = 0;
+yvelocity = 0;

@@ -1,6 +1,6 @@
 /// @description set target
 
-moving_towards_target = true;
+state = ENEMY_FOLLOW.PLAYER;
 
 xtarget = oPlayer.x;
 ytarget = oPlayer.y;

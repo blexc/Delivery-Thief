@@ -3,7 +3,7 @@
 function enemy_sees_player(_this){
 	with (_this)
 	{
-		var _len = UNIT * 3;
+		var _len = UNIT * sight_distance;
 		var _xcenter = x + w_half;
 		var _ycenter = y + h_half;
 		var _xend_view = _xcenter + lengthdir_x(_len, direction);
@@ -23,6 +23,11 @@ function enemy_path_start(_this)
 			x = xstart;
 			y = ystart;
 			path_start(path, move_speed, path_action_restart, false);
+			return true;
+		}
+		else
+		{
+			return false;	
 		}
 	}
 }
