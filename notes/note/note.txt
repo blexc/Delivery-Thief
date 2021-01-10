@@ -1,0 +1,4 @@
+problems/features:
+ - enemies can go through walls
+ - enemies that do not move, don't face their original direction after moving towards player
+ - enemies that do not move, can't alternate between different directions

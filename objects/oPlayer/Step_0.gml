@@ -9,3 +9,6 @@ if (can_move)
 }
 
 player_move(_horizontal, _vertical);
+
+xcenter = x + UNIT / 2;
+ycenter = y + UNIT / 2;
