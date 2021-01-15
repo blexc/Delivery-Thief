@@ -33,3 +33,17 @@ function round_to_unit(_value)
 {
 	return round(_value / UNIT) * UNIT;
 }
+
+function collision_line_ext(_x1, _y1, _x2, _y2, _obj, _prec, _notme, _thick)
+{
+	var _top_left = collision_line(
+		_x1, _y1, _x2, _y2, _obj, _prec, _notme);
+	var _top_right = collision_line(
+		_x1 + _thick, _y1, _x2 + _thick, _y2, _obj,_prec, _notme);
+	var _bottom_left = collision_line(
+		_x1, _y1 + _thick, _x2, _y2 + _thick, _obj, _prec, _notme);
+	var _bottom_right = collision_line(
+		_x1 + _thick, _y1 + _thick, _x2 + _thick, _y2 + _thick, _obj, _prec, _notme);
+	
+	return _top_left || _top_right || _bottom_left || _bottom_right;
+}

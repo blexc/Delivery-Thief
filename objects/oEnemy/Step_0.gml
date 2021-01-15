@@ -1,8 +1,4 @@
-/// @description seek and move towards player
+/// @description 
 
-if (state == ENEMY_FOLLOW.PATH && alarm[0] == -1 && enemy_sees_player(id))
-{
-	path_end();
-	player_freeze();
-	alarm[0] = room_speed;
-}
+script_execute(state);
+move_speed = approach(move_speed, move_speed_target, 0.01);

@@ -1,9 +1,9 @@
-function player_move(_horizontal, _vertical)
+function player_move()
 {
 	with (oPlayer)
 	{
-		xvelocity = _horizontal * move_speed;
-		yvelocity = _vertical   * move_speed;
+		xvelocity = horizontal * move_speed;
+		yvelocity = vertical   * move_speed;
 		
 		// check for x collision
 		if (solid_at(id, x + xvelocity, y))

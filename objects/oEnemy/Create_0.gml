@@ -1,16 +1,19 @@
-/// @description create path
+/// @description 
 
-enum ENEMY_FOLLOW
-{
-	PATH,
-	PLAYER,
-	START
-}
+move_speed_idle = 0.5;
+move_speed_seek = 2;
+move_speed = 0;
 
-temp_path = path_add();
-enemy_normal_path_start(id); // if false, following a target
+state = enemy_state_idle;
+move_speed_target = move_speed_idle;
 
-state = ENEMY_FOLLOW.PATH;
+// player's last seen pos
+xseen = x;	
+yseen = y;
 
-direction_start = direction;
-sight_distance = 4; // in units
+// idle coordinates
+xwander = x;
+ywander = y;
+
+sight_cone = 65; // in degrees
+sight_dist = 4 * UNIT;

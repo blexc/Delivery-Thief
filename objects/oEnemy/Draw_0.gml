@@ -1,16 +1,26 @@
 /// @description debug
 draw_self();
+if (!debug_mode) exit;
 
-if (debug_mode)
+// draw path
+draw_set_alpha(0.5);
+draw_set_color(c_purple);
+//draw_line(x			, y			, xwander		, ywander);
+//draw_line(x + UNIT	, y			, xwander + UNIT, ywander);
+//draw_line(x			, y + UNIT	, xwander		, ywander + UNIT);
+//draw_line(x + UNIT	, y + UNIT	, xwander + UNIT, ywander + UNIT);
+
+// draw sight cone
+if (instance_exists(oPlayer))
 {
-	draw_set_color(c_blue);
-	if (path_exists(temp_path)) draw_path(temp_path, x, y, false);
-	
-	var _len = UNIT * sight_distance;
-	var _xcenter = x + UNIT / 2;
-	var _ycenter = y + UNIT / 2;
-	set_draw(fa_center, fa_center, (enemy_sees_player(id)) ? c_red : c_green, 1);
-	draw_line(_xcenter, _ycenter,
-		_xcenter + lengthdir_x(_len, direction), 
-		_ycenter + lengthdir_y(_len, direction));
+	var _hu = UNIT / 2;
+	draw_set_alpha(1);
+	draw_set_color(c_green);
+	draw_line(x + _hu, y + _hu, x + _hu + lengthdir_x(sight_dist, direction - sight_cone / 2),
+		y + _hu + lengthdir_y(sight_dist, direction - sight_cone / 2));
+		
+	draw_line(x + _hu, y + _hu, x + _hu + lengthdir_x(sight_dist, direction + sight_cone / 2),
+		y + _hu + lengthdir_y(sight_dist, direction + sight_cone / 2));
 }
+
+draw_set_alpha(1);

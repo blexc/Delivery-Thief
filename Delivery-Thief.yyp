@@ -6,6 +6,7 @@
     {"id":{"name":"oDebug","path":"objects/oDebug/oDebug.yy",},"order":7,},
     {"id":{"name":"tsSolid","path":"tilesets/tsSolid/tsSolid.yy",},"order":0,},
     {"id":{"name":"Helper","path":"scripts/Helper/Helper.yy",},"order":3,},
+    {"id":{"name":"rMinigame","path":"rooms/rMinigame/rMinigame.yy",},"order":2,},
     {"id":{"name":"Debug","path":"scripts/Debug/Debug.yy",},"order":1,},
     {"id":{"name":"Input","path":"scripts/Input/Input.yy",},"order":2,},
     {"id":{"name":"oInit","path":"objects/oInit/oInit.yy",},"order":0,},
@@ -45,6 +46,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"roomId":{"name":"rRoom1","path":"rooms/rRoom1/rRoom1.yy",},},
+    {"roomId":{"name":"rMinigame","path":"rooms/rMinigame/rMinigame.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

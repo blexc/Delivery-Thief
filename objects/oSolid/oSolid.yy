@@ -3,7 +3,7 @@
     "name": "sSolid1",
     "path": "sprites/sSolid1/sSolid1.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
